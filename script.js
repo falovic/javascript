@@ -56,7 +56,7 @@ var fullname = 'fatih şahin';
 console.log(fullname);
 
 // değişkenler sayısal ifadeyle başlayamaz.
- 
+
 // var 1yas;  - yanlış
 var yas1;  // - doğru
 var _yas2; // - doğru
@@ -69,16 +69,16 @@ var $yas3; // - doğru
 // birden fazla kelime arasında boşluk bırakılarak değişken atanamaz. 
 
 // var ad soyad='fatih şahin' - yanlış
-var ad_soyad='fatih şahin' // - doğru
-var AdSoyad='fatih şahin'  // - doğru
-var adsoyad='fatih şahin'  // - doğru
+var ad_soyad = 'fatih şahin' // - doğru
+var AdSoyad = 'fatih şahin'  // - doğru
+var adsoyad = 'fatih şahin'  // - doğru
 
 // case sensitive (büyük - küçük harf duyarlılığı vardır)
 
-var firstname='alpha'
-var FirstName='beta'
-var firstName='charlie'
-var Firstname='delta'
+var firstname = 'alpha'
+var FirstName = 'beta'
+var firstName = 'charlie'
+var Firstname = 'delta'
 
 console.log(firstname);
 console.log(FirstName);
@@ -87,19 +87,69 @@ console.log(Firstname);
 
 // var , let , const
 
-let city='Bursa';
+let city = 'Bursa';
 console.log(city);
 
 // farklı değer atanmadığından emin olmak için "const" değişkeni kullanılır. 
 // "var" ya da "let" değişkeni kullanıldığında, sehven farklı değerler atanırsa console hata vermez, farketmek mümkün olmaz.   
 // ancak "const" değişkenine aşağıdaki gibi iki farklı değer (mail) atanırsa console'da hata mesajı verir.
 
-const email='abc@gmail.com';
+/*
+const email = 'abc@gmail.com';
 console.log(email);
 
-email='xyz@gmail.com';
+email = 'xyz@gmail.com';
 console.log(email);
+*/
 
 ///************************/
 //*** DEĞİŞKEN TİPLERİ ***/
 /************************/
+
+// değişken türleri "typeof" değeri ile kontrol edilebilir.
+
+/* 
+
+1. primitive types
+   a. string
+   b. number
+   c. boolean
+   d. null
+   e. undefined
+2. reference types - objects
+   a. array
+   
+*/
+
+
+
+// sözel işlemler için "string" değişkeni kullanılır. 
+
+let name = 'echo';
+console.log(typeof name);
+
+// sayısal işlemler için "number" değişkeni kullanılır. 
+
+let old = 25;
+let money = 100.5;
+
+console.log(typeof old)
+console.log(typeof money)
+
+// koşul durumlarında "boolean" değişkeni kullanılır. bir soru sorduğumuzda 'true' ya da 'false' karşılığının gelmesi gibi.
+
+let isActive = true;
+
+console.log(typeof isActive)
+
+// "null" ise herhangi bir değer atanmadığında boşluğu temsil eden değişkendir.
+
+let job = null;
+
+console.log(typeof isActive)
+
+// "undefined"
+
+let car;
+
+console.log(typeof car)
