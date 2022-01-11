@@ -118,17 +118,18 @@ console.log(email);
    e. undefined
 2. reference types - objects
    a. array
-   
+   b. object
+   c. function
 */
 
+// Primitive Types //
 
-
-// sözel işlemler için "string" değişkeni kullanılır. 
+// "string" = sözel işlemler için kullanılır. 
 
 let name = 'echo';
 console.log(typeof name);
 
-// sayısal işlemler için "number" değişkeni kullanılır. 
+// "number" = sayısal işlemler için kullanılır. 
 
 let old = 25;
 let money = 100.5;
@@ -136,13 +137,13 @@ let money = 100.5;
 console.log(typeof old)
 console.log(typeof money)
 
-// koşul durumlarında "boolean" değişkeni kullanılır. bir soru sorduğumuzda 'true' ya da 'false' karşılığının gelmesi gibi.
+// "boolean" = koşul durumlarında kullanılır. bir soruya 'true' ya da 'false' karşılığının verilmesi gibi.
 
 let isActive = true;
 
 console.log(typeof isActive)
 
-// "null" ise herhangi bir değer atanmadığında boşluğu temsil eden değişkendir.
+// "null" = herhangi bir değer atanmadığında boşluğu temsil eder.
 
 let job = null;
 
@@ -153,3 +154,18 @@ console.log(typeof isActive)
 let car;
 
 console.log(typeof car)
+
+// Reference Types - Objects //
+
+// "array" = sıralı dizinler için kullanılır.
+
+let names = ["Jack", "Neo", "Max"]
+
+// "object"
+
+let adress = {
+   city: "Bursa",
+   country: "Türkiye",
+}
+
+// "function"
