@@ -230,7 +230,7 @@ val = Number(false)
 val = Number(null)
 val = Number("35")
 
-// parseInt
+// parseInt (ondalıkları temizler, tam sayıya dönüştürür)
 
 val = parseInt("10");
 val = parseInt("10.5");
