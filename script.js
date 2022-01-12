@@ -34,22 +34,22 @@
 
 /* 
 site pop-up uyarı mesajı
-alert("hello world"); 
+alert('hello world'); 
 */
 
 /*
 console çıktıları:
-console.log("Sayfayı incele > Console dediğimizde çıktılar burada gözükür")
+console.log('Sayfayı incele > Console dediğimizde çıktılar burada gözükür')
 */
 
 /* 
 console hata mesajı:
-console.error("hata") 
+console.error('hata') 
 */
 
 /* 
 console uyarı mesajı
-console.warn("uyarı") 
+console.warn('uyarı') 
 */
 
 /* 
@@ -62,13 +62,13 @@ console.log([1, 2, 3])
 /*******************/
 
 /*
-bir değişkene değer atanmazsa "undefined" olarak gözükür.
+bir değişkene değer atanmazsa 'undefined' olarak gözükür.
 var age;
 console.log(age);
 */
 
 /*
-"age" değişkenine "20" değerini ve "fullname" değişkenine "fatih şahin" değerini atayalım.
+'age' değişkenine '20' değerini ve 'fullname' değişkenine 'fatih şahin' değerini atayalım.
 var age = 20;
 console.log(age);
 var fullname = 'fatih şahin';
@@ -114,9 +114,9 @@ var , let , const
 let city = 'Bursa';
 console.log(city);
 
-> farklı değer atanmadığından emin olmak için "const" değişkeni kullanılır. 
-> "var" ya da "let" değişkeni kullanıldığında, sehven farklı değerler atanırsa console hata vermez, farketmek mümkün olmaz.   
-> ancak "const" değişkenine aşağıdaki gibi iki farklı değer (mail) atanırsa console'da hata mesajı verir.
+> farklı değer atanmadığından emin olmak için 'const' değişkeni kullanılır. 
+> 'var' ya da 'let' değişkeni kullanıldığında, sehven farklı değerler atanırsa console hata vermez, farketmek mümkün olmaz.   
+> ancak 'const' değişkenine aşağıdaki gibi iki farklı değer (mail) atanırsa console'da hata mesajı verir.
 
 const email = 'abc@gmail.com';
 console.log(email);
@@ -129,7 +129,7 @@ console.log(email);
 
 /*
 
-değişken türleri "typeof" değeri ile kontrol edilebilir.
+değişken türleri 'typeof' değeri ile kontrol edilebilir.
 
 1. primitive types
    a. string
@@ -147,13 +147,13 @@ değişken türleri "typeof" değeri ile kontrol edilebilir.
 // Primitive Types //
 
 /*
-"string" = sözel işlemler için kullanılır. 
+'string' = sözel işlemler için kullanılır. 
 let name = 'echo';
 console.log(typeof name);
 */
 
 /*
-"number" = sayısal işlemler için kullanılır. 
+'number' = sayısal işlemler için kullanılır. 
 let old = 25;
 let money = 100.5;
 console.log(typeof old)
@@ -161,19 +161,19 @@ console.log(typeof money)
 */
 
 /*
-"boolean" = koşul durumlarında kullanılır. bir soruya 'true' ya da 'false' karşılığının verilmesi gibi.
+'boolean' = koşul durumlarında kullanılır. bir soruya 'true' ya da 'false' karşılığının verilmesi gibi.
 let isActive = true;
 console.log(typeof isActive)
 */
 
 /*
-"null" = herhangi bir değer atanmadığında boşluğu temsil eder.
+'null' = herhangi bir değer atanmadığında boşluğu temsil eder.
 let job = null;
 console.log(typeof isActive)
 */
 
 /*
-"undefined"
+'undefined'
 let car;
 console.log(typeof car)
 */
@@ -181,21 +181,21 @@ console.log(typeof car)
 // Reference Types - Objects //
 
 /*
-"array" = sıralı dizinler için kullanılır.
-let names = ["Jack", "Neo", "Max"]
+'array' = sıralı dizinler için kullanılır.
+let names = ['Jack', 'Neo', 'Max']
 */
 
 /*
-"object"
+'object'
 
 let adress = {
-   city: "Bursa",
-   country: "Türkiye", 
+   city: 'Bursa',
+   country: 'Türkiye', 
 }
 */
 
 /*
-"function"
+'function'
 
 var calculateAge = function () {
    return 0;
@@ -243,22 +243,22 @@ console.log(val.length);  > karakter sayısı (only string)
 
 /*
 string to number
-val = Number("a");
+val = Number('a');
 val = Number(true)
 val = Number(false)
 val = Number(null)
-val = Number("35")
+val = Number('35')
 */
 
 /*
 parseInt (ondalıkları temizler, tam sayıya dönüştürür)
-val = parseInt("10");
-val = parseInt("10.5");
+val = parseInt('10');
+val = parseInt('10.5');
 */
 
 /*
 parseFloat
-val = parseFloat("10.5");
+val = parseFloat('10.5');
 */
 
 /*
@@ -281,14 +281,38 @@ console.log(val.toFixed(3))  > ondalık basamak sayısı (only number)
 let val;
 const a = 10;
 const b = 5;
+const c = '5';
+let d = 3;
 
-// aritmetik operatörler: matematiksel işlemlerde kullanılan operatörleri temsil eder.
-
+/*
+1. aritmetik operatörler: matematiksel işlemlerde kullanılan operatörleri temsil eder.
 val = a + b;
-// val = a - b;
-// val = a * b;
-// val = a / b;
-// val = a % b;
-// val = c++;
-// val = ++c;
-// val = --c;
+val = a - b;
+val = a * b;
+val = a / b;
+val = a % b;
+val = d++;
+val = ++d;
+val = --d;
+val = d--;
+*/
+
+/*
+2. atama operatörleri
+val = a;
+val += a; // val = val + a;
+val -= a; // val = val - a; 
+val *= a; // val = val * a;
+val /= a; // val = val / a;
+val %= a; // val = val % a; (% : mod)
+*/
+
+/*
+3. karşılaştırma operatörleri
+== değer kontrolü
+=== değer kontrolü & type */
+val = a == b;
+val = b == c;
+cal = 
+console.log(val);
+console.log(typeof val);
