@@ -2,11 +2,29 @@
 
 /* birden fazla satırlı yorum kısımları için slash+star */
 
+// (Ctrl+K)+(Ctrl+C) = seçilenlerin alayına double-slash
+
 /*
 
-GİRİŞ
-DEĞİŞKENLER
-DEĞİŞKEN TİPLERİ
+032 - GİRİŞ
+060 - DEĞİŞKENLER
+OPERATÖRLER
+VERİ YAPILARI
+DİZİLER
+KOŞUL İFADELERİ
+DÖNGÜLER
+FONKSİYONLAR
+DOM
+EVENTS
+LOCAL-STORAGE
+JQUERY
+NESNE TABANLI PROGRAMLAMA
+HATA YÖNETİMİ
+ES6+ & ES7
+RESTFUL API & AJAX
+MODULE PATTERN
+NODEJS & NPM
+TYPE-SCRİPT
 
 */
 
@@ -102,9 +120,7 @@ email = 'xyz@gmail.com';
 console.log(email);
 */
 
-///************************/
-//*** DEĞİŞKEN TİPLERİ ***/
-/************************/
+//*** DEĞİŞKEN TÜRLERİ ***//
 
 // değişken türleri "typeof" değeri ile kontrol edilebilir.
 
@@ -120,9 +136,10 @@ console.log(email);
    a. array
    b. object
    c. function
+
 */
 
-// Primitive Types //
+/// Primitive Types ///
 
 // "string" = sözel işlemler için kullanılır. 
 
@@ -155,7 +172,7 @@ let car;
 
 console.log(typeof car)
 
-// Reference Types - Objects //
+/// Reference Types - Objects ///
 
 // "array" = sıralı dizinler için kullanılır.
 
@@ -169,3 +186,59 @@ let adress = {
 }
 
 // "function"
+
+var calculateAge = function () {
+   return 0;
+}
+
+console.log(typeof calculateAge)
+
+//*** TÜR DÖNÜŞÜMÜ ***//
+
+let val;
+
+// number to string
+
+val = String(10);
+
+// bool to string
+
+val = String(true);
+
+// date to string
+
+val = String(new Date());   // .get yazılarak yalnızca ay,gün,yıl gibi değerler seçilip görüntülenebilir. 
+
+// array to string
+
+val = String([1, 2, 3]);
+
+// toString() (değerin sonuna .toString ekleyerek de kolayca dönüştürülebilir)
+
+val = (10).toString();
+val = (false).toString();
+
+console.log(val);         // değişken içeriği 
+console.log(typeof val);  // değişken türü
+console.log(val.length);  // karakter sayısı (only string)
+
+// string to number
+
+val = Number("a");
+val = Number(true)
+val = Number(false)
+val = Number(null)
+val = Number("35")
+
+// parseInt
+
+val = parseInt("10");
+val = parseInt("10.5");
+
+// parseFloat
+
+val = parseFloat("10.5");
+
+console.log(val);            // değişken içeriği 
+console.log(typeof val);     // değişken türü
+console.log(val.toFixed(3))  // ondalık basamak sayısı (only number)
