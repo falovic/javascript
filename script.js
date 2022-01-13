@@ -5,8 +5,8 @@
 // (Ctrl+K)+(Ctrl+C) = seçilenlerin alayına double-slash
 
 // 028 - GİRİŞ
-// 061 - DEĞİŞKENLER
-// 271 - OPERATÖRLER
+// 051 - DEĞİŞKENLER
+// 207 - OPERATÖRLER
 // VERİ YAPILARI
 // DİZİLER
 // KOŞUL İFADELERİ
@@ -32,72 +32,51 @@
 
 // Ya da harici bir script.js dosyası oluşturulabilir.
 
-/* 
-site pop-up uyarı mesajı
-alert('hello world'); 
-*/
+// site pop-up uyarı mesajı
+alert('Tamam mı devam mı?');
 
-/*
-console çıktıları:
+// console çıktıları:
 console.log('Sayfayı incele > Console dediğimizde çıktılar burada gözükür')
-*/
 
-/* 
-console hata mesajı:
-console.error('hata') 
-*/
+// hata mesajı:
+console.error('hata')
 
-/* 
-console uyarı mesajı
-console.warn('uyarı') 
-*/
+// uyarı mesajı
+console.warn('uyarı')
 
-/* 
-console sayı dizini
-console.log([1, 2, 3]) 
-*/
+// sayı dizini
+console.log([1, 2, 3])
 
 ///*******************/
 //*** DEĞİŞKENLER ***/
 /*******************/
 
-/*
-bir değişkene değer atanmazsa 'undefined' olarak gözükür.
+// bir değişkene değer atanmazsa 'undefined' olarak gözükür.
 var age;
 console.log(age);
-*/
 
-/*
-'age' değişkenine '20' değerini ve 'fullname' değişkenine 'fatih şahin' değerini atayalım.
+// 'age' değişkenine '20' değerini ve 'fullname' değişkenine 'fatih şahin' değerini atayalım.
 var age = 20;
 console.log(age);
 var fullname = 'fatih şahin';
 console.log(fullname);
-*/
 
-/*
-değişkenler sayısal ifadeyle başlayamaz.
-var 1yas;  - yanlış
-var yas1;  - doğru
-var _yas2; - doğru
-var $yas3; - doğru
-*/
+// değişkenler sayısal ifadeyle başlayamaz.
+var yas1;    // doğru
+var _yas2;   // doğru
+var $yas3;   // doğru
+// var 1yas; // yanlış
 
-/*
-komut isimleriyle tanımlama yapılamaz.
-var for; - yanlış
-*/
+// komut isimleriyle tanımlama yapılamaz.
+// var for; - yanlış
 
-/*
-birden fazla kelime arasında boşluk bırakılarak değişken atanamaz. 
-var ad soyad = 'fatih şahin' - yanlış
-var ad_soyad = 'fatih şahin' - doğru
-var AdSoyad  = 'fatih şahin' - doğru
-var adsoyad  = 'fatih şahin' - doğru
-*/
+// birden fazla kelime arasında boşluk bırakılarak değişken atanamaz. 
+var ad_soyad = 'fatih şahin' // doğru
+var AdSoyad = 'fatih şahin'  // doğru
+var adsoyad = 'fatih şahin'  // doğru
+// var ad soyad = 'fatih şahin' // yanlış
 
-/*
-case sensitive (büyük - küçük harf duyarlılığı vardır)
+// case sensitive (büyük - küçük harf duyarlılığı vardır)
 var firstname = 'alpha'
 var FirstName = 'beta'
 var firstName = 'charlie'
@@ -106,31 +85,25 @@ console.log(firstname);
 console.log(FirstName);
 console.log(firstName);
 console.log(Firstname);
-*/
 
-/*
-var , let , const
-
+// var , let , const
 let city = 'Bursa';
 console.log(city);
 
-> farklı değer atanmadığından emin olmak için 'const' değişkeni kullanılır. 
-> 'var' ya da 'let' değişkeni kullanıldığında, sehven farklı değerler atanırsa console hata vermez, farketmek mümkün olmaz.   
-> ancak 'const' değişkenine aşağıdaki gibi iki farklı değer (mail) atanırsa console'da hata mesajı verir.
+// farklı değer atanmadığından emin olmak için 'const' değişkeni kullanılır. 
+// 'var' ya da 'let' değişkeni kullanıldığında, sehven farklı değerler atanırsa console hata vermez, farketmek mümkün olmaz.   
+// ancak 'const' değişkenine aşağıdaki gibi iki farklı değer (mail) atanırsa console'da hata mesajı verir.
 
+/*
 const email = 'abc@gmail.com';
 console.log(email);
-
-email = 'xyz@gmail.com';
+const email = 'xyz@gmail.com';
 console.log(email);
 */
 
 //*** DEĞİŞKEN TÜRLERİ ***//
 
 /*
-
-değişken türleri 'typeof' değeri ile kontrol edilebilir.
-
 1. primitive types
    a. string
    b. number
@@ -141,131 +114,94 @@ değişken türleri 'typeof' değeri ile kontrol edilebilir.
    a. array
    b. object
    c. function
-
 */
+
+// değişken türleri 'typeof' değeri ile kontrol edilebilir.
 
 // Primitive Types //
 
-/*
-'string' = sözel işlemler için kullanılır. 
+// 'string' = sözel işlemler için kullanılır. 
 let name = 'echo';
 console.log(typeof name);
-*/
 
-/*
-'number' = sayısal işlemler için kullanılır. 
+// 'number' = sayısal işlemler için kullanılır. 
 let old = 25;
 let money = 100.5;
 console.log(typeof old)
 console.log(typeof money)
-*/
 
-/*
-'boolean' = koşul durumlarında kullanılır. bir soruya 'true' ya da 'false' karşılığının verilmesi gibi.
+// 'boolean' = koşul durumlarında kullanılır. bir soruya 'true' ya da 'false' karşılığının verilmesi gibi.
 let isActive = true;
 console.log(typeof isActive)
-*/
 
-/*
-'null' = herhangi bir değer atanmadığında boşluğu temsil eder.
+// 'null' = herhangi bir değer atanmadığında boşluğu temsil eder.
 let job = null;
 console.log(typeof isActive)
-*/
 
-/*
-'undefined'
+// 'undefined'
 let car;
 console.log(typeof car)
-*/
 
 // Reference Types - Objects //
 
-/*
-'array' = sıralı dizinler için kullanılır.
+// 'array' = sıralı dizinler için kullanılır.
 let names = ['Jack', 'Neo', 'Max']
-*/
 
-/*
-'object'
-
+// 'object'
 let adress = {
    city: 'Bursa',
-   country: 'Türkiye', 
+   country: 'Türkiye',
 }
-*/
 
-/*
-'function'
-
+// 'function'
 var calculateAge = function () {
    return 0;
 }
 console.log(typeof calculateAge)
-*/
 
 //*** TÜR DÖNÜŞÜMÜ ***//
 
-// let val;
+let val;
 
-/*
-number to string
+// number to string
 val = String(10);
-*/
 
-/*
-bool to string
+// bool to string
 val = String(true);
-*/
 
-/*
-date to string
-val = String(new Date()); 
-> .get yazılarak yalnızca ay,gün,yıl gibi değerler de seçilip görüntülenebilir.
-*/
+// date to string
+val = String(new Date());
+val = String(new Date().getFullYear)
 
-/*
-array to string
+// .get yazılarak yalnızca ay,gün,yıl gibi değerler de seçilip görüntülenebilir.
+
+// array to string
 val = String([1, 2, 3]);
-*/
 
-/*
-toString() 
-> değerin sonuna .toString ekleyerek de kolayca dönüştürülebilir.
+// toString() 
 val = (10).toString();
 val = (false).toString();
-*/
 
-/*
-console.log(val);         > değişken içeriği 
-console.log(typeof val);  > değişken türü
-console.log(val.length);  > karakter sayısı (only string)
-*/
+// değerin sonuna .toString ekleyerek de kolayca dönüştürülebilir.
 
-/*
-string to number
+// string to number
 val = Number('a');
 val = Number(true)
 val = Number(false)
 val = Number(null)
 val = Number('35')
-*/
 
-/*
-parseInt (ondalıkları temizler, tam sayıya dönüştürür)
+// parseInt (ondalıkları temizler, tam sayıya dönüştürür)
 val = parseInt('10');
 val = parseInt('10.5');
-*/
 
-/*
-parseFloat
+// parseFloat
 val = parseFloat('10.5');
-*/
 
-/*
-console.log(val);            > değişken içeriği 
-console.log(typeof val);     > değişken türü
-console.log(val.toFixed(3))  > ondalık basamak sayısı (only number)
-*/
+console.log(val);           // değişken içeriği 
+console.log(typeof val);    // değişken türü
+console.log(val.length);    // karakter sayısı (only string)
+console.log(val.toFixed(3)) // ondalık basamak sayısı (only number)
 
 ///*******************/
 //*** OPERATÖRLER ***/
@@ -276,16 +212,17 @@ console.log(val.toFixed(3))  > ondalık basamak sayısı (only number)
 2. atama operatörleri
 3. karşılaştırma operatörleri
 4. mantıksal operatörler
+   a. && (And)
+   b. || (Or)
+   c. ! (Not)
 */
 
-let val;
 const a = 10;
 const b = 5;
 const c = '5';
 let d = 3;
 
-/*
-1. aritmetik operatörler: matematiksel işlemlerde kullanılan operatörleri temsil eder.
+// 1. aritmetik operatörler: matematiksel işlemlerde kullanılan operatörleri temsil eder.
 val = a + b;
 val = a - b;
 val = a * b;
@@ -295,24 +232,32 @@ val = d++;
 val = ++d;
 val = --d;
 val = d--;
-*/
 
-/*
-2. atama operatörleri
+// 2. atama operatörleri
 val = a;
 val += a; // val = val + a;
 val -= a; // val = val - a; 
 val *= a; // val = val * a;
 val /= a; // val = val / a;
 val %= a; // val = val % a; (% : mod)
-*/
 
-/*
-3. karşılaştırma operatörleri
-== değer kontrolü
-=== değer kontrolü & type */
+// 3. karşılaştırma operatörleri
 val = a == b;
-val = b == c;
-cal = 
+val = b == c;   // == değer kontrolü
+val = b === c;  // === değer & type kontrolü
+val = a != b;   // a!=b a, b'ye eşit değil mi? 
+val = a !== b;
+val = a > b;
+val = b < a;
+val = a >= b;
+val = 5 >= 5;
+val = a <= b;
+
+// 4. mantıksal operatörler
+// a. && (And)
+
+// b. || (Or)
+// c. ! (Not)
+
 console.log(val);
 console.log(typeof val);
