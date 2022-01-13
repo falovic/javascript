@@ -245,7 +245,7 @@ val %= a; // val = val % a; (% : mod)
 val = a == b;
 val = b == c;   // == değer kontrolü
 val = b === c;  // === değer & type kontrolü
-val = a != b;   // a!=b a, b'ye eşit değil mi? 
+val = a != b;   // a! a'nın 'değil'ini almaktır 
 val = a !== b;
 val = a > b;
 val = b < a;
@@ -254,10 +254,26 @@ val = 5 >= 5;
 val = a <= b;
 
 // 4. mantıksal operatörler
+
 // a. && (And)
+// true  && true  => true
+// true  && false => false
+// false && false => false
+
+val = (a>b) && (a>c)
 
 // b. || (Or)
+// true  || true  => true
+// true  || false => true
+// false || false => false
+
+val = (a>b) || (a<c)
+
 // c. ! (Not)
+// !true  => false
+// !false => true
+
+val = !(a>b)
 
 console.log(val);
 console.log(typeof val);
