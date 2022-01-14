@@ -311,12 +311,25 @@ var num = 10.123456789
 val = isNaN("10");        // NaN sorugusu yapar.
 val = num.toPrecision(4); // .toPrecision(x) sayının x kadar basamağını yazdırır. sondaki rakamı yuvarlamaz.
 val = num.toFixed(4);     // .toFixed(x) sayının virgülden sonraki x kadar basamağını yazdırır. sondaki rakamı yuvarlar.
-
 val = Math.PI;            // pi sayısı
-val = Math.round();
-val = Math.ceil();
-val = Math.ceil();
+val = Math.round(2.4);    // .round(x) x'i en yakın sayıya yuvarlar.
+val = Math.round(2.7);
+val = Math.ceil(2.4);     // .ceil(x) x'i sadece yukarı yuvarlar.
+val = Math.ceil(2.7);
+val = Math.floor(2.4);    // .floor(x) x'i sadece aşağı yuvarlar.
+val = Math.floor(2.7);
+val = Math.sqrt(64);      // .sqrt(x) x'in karekökünü alır.
+val = Math.pow(3,3);      // .sqrt(x,y) x üzeri y'yi hesaplar.
+val = Math.abs(-100);     // .abs(x) x'in mutlak değerini alır.
+val = Math.min(2,3,4);    // .min(x,y,z) sayı dizisindeki en küçük sayıyı verir.
+val = Math.max(2,3,4);    // .max(x,y,z) sayı dizisindeki en büyük sayıyı verir.
+val = Math.random()       // .random() rastgele sayı getirir.
+
+val = Math.floor(Math.random()*100+1) 
+// 0-100 arasında rastgele değerler getirdik.
+// rastgele resimler getirmek için resimlere bu şekilde değerler atanabilir.
 
 
 console.log(val);
 console.log(typeof val);
+
