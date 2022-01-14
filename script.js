@@ -329,7 +329,6 @@ val = Math.floor(Math.random()*100+1)
 // 0-100 arasında rastgele değerler getirdik.
 // rastgele resimler getirmek için resimlere bu şekilde değerler atanabilir.
 
-
 console.log(val);
 console.log(typeof val);
 
