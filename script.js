@@ -6,8 +6,8 @@
 
 // 028 - GİRİŞ
 // 051 - DEĞİŞKENLER
-// 207 - OPERATÖRLER
-// 282 - VERİ YAPILARI
+// 209 - OPERATÖRLER
+// 284 - VERİ YAPILARI
 // DİZİLER
 // KOŞUL İFADELERİ
 // DÖNGÜLER
@@ -130,6 +130,8 @@ let money = 100.5;
 console.log(typeof old)
 console.log(typeof money)
 
+// NaN : Not a Number
+
 // 'boolean' = koşul durumlarında kullanılır. bir soruya 'true' ya da 'false' karşılığının verilmesi gibi.
 let isActive = true;
 console.log(typeof isActive)
@@ -191,11 +193,11 @@ val = Number(false)
 val = Number(null)
 val = Number('35')
 
-// parseInt (ondalıkları temizler, tam sayıya dönüştürür)
+// parseInt (string ifadeyi tam sayı olarak dönüştürür)
 val = parseInt('10');
 val = parseInt('10.5');
 
-// parseFloat
+// parseFloat (string ifadeyi ondalık sayı olarak dönüştürür)
 val = parseFloat('10.5');
 
 console.log(val);           // değişken içeriği 
@@ -301,3 +303,6 @@ console.log(time.getHours());    // saat
 console.log(time.getMonth());    // yılın kaçıncı ayı (ocak:0)
 console.log(time.getMinutes());  // dakika
 console.log(time.getSeconds());  // saniye
+
+//*** NUMBERS & NUMBER METHODS ***//
+
