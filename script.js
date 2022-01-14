@@ -7,7 +7,7 @@
 // 028 - GİRİŞ
 // 051 - DEĞİŞKENLER
 // 207 - OPERATÖRLER
-// VERİ YAPILARI
+// 282 - VERİ YAPILARI
 // DİZİLER
 // KOŞUL İFADELERİ
 // DÖNGÜLER
@@ -260,20 +260,44 @@ val = a <= b;
 // true  && false => false
 // false && false => false
 
-val = (a>b) && (a>c)
+val = (a > b) && (a > c)
 
 // b. || (Or)
 // true  || true  => true
 // true  || false => true
 // false || false => false
 
-val = (a>b) || (a<c)
+val = (a > b) || (a < c)
 
 // c. ! (Not)
 // !true  => false
 // !false => true
 
-val = !(a>b)
+val = !(a > b)
 
 console.log(val);
 console.log(typeof val);
+
+///*********************/
+//*** VERİ YAPILARI ***/
+/*********************/
+
+//*** DATES & TIMES ***//
+
+// date object
+let time = new Date();
+let birthday = new Date(1997, 1, 23);
+console.log("Fatih'in yaşı:" + (time.getFullYear()-birthday.getFullYear()));
+
+// set methods
+time.setFullYear(2050);
+time.setMonth(time.getMonth()+1);
+
+// get methods
+console.log(time.getDate());     // ayın kaçıncı günü
+console.log(time.getDay());      // haftanın kaçıncı günü (pazar:0)
+console.log(time.getFullYear()); // yıl
+console.log(time.getHours());    // saat
+console.log(time.getMonth());    // yılın kaçıncı ayı (ocak:0)
+console.log(time.getMinutes());  // dakika
+console.log(time.getSeconds());  // saniye
