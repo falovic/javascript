@@ -33,7 +33,7 @@
 // Ya da harici bir script.js dosyası oluşturulabilir.
 
 // site pop-up uyarı mesajı
-alert('Tamam mı devam mı?');
+// alert('Tamam mı devam mı?');
 
 // console çıktıları:
 console.log('Sayfayı incele > Console dediğimizde çıktılar burada gözükür')
@@ -306,3 +306,17 @@ console.log(time.getSeconds());  // saniye
 
 //*** NUMBERS & NUMBER METHODS ***//
 
+var num = 10.123456789
+
+val = isNaN("10");        // NaN sorugusu yapar.
+val = num.toPrecision(4); // .toPrecision(x) sayının x kadar basamağını yazdırır. sondaki rakamı yuvarlamaz.
+val = num.toFixed(4);     // .toFixed(x) sayının virgülden sonraki x kadar basamağını yazdırır. sondaki rakamı yuvarlar.
+
+val = Math.PI;            // pi sayısı
+val = Math.round();
+val = Math.ceil();
+val = Math.ceil();
+
+
+console.log(val);
+console.log(typeof val);
