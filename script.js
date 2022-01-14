@@ -325,9 +325,11 @@ val = Math.min(2,3,4);    // .min(x,y,z) sayı dizisindeki en küçük sayıyı 
 val = Math.max(2,3,4);    // .max(x,y,z) sayı dizisindeki en büyük sayıyı verir.
 val = Math.random()       // .random() rastgele sayı getirir.
 
-val = Math.floor(Math.random()*100+1) 
+// val = Math.floor(Math.random()*100+1) 
 // 0-100 arasında rastgele değerler getirdik.
 // rastgele resimler getirmek için resimlere bu şekilde değerler atanabilir.
+
+val = Math.floor(Math.random()*100+1)
 
 console.log(val);
 console.log(typeof val);
