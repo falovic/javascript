@@ -56,7 +56,7 @@ var age;
 console.log(age);
 
 // 'age' değişkenine '20' değerini ve 'fullname' değişkenine 'fatih şahin' değerini atayalım.
-var age = 20;
+var age = 25;
 console.log(age);
 var fullname = 'fatih şahin';
 console.log(fullname);
@@ -289,11 +289,11 @@ console.log(typeof val);
 // date object
 let time = new Date();
 let birthday = new Date(1997, 1, 23);
-console.log("Fatih'in yaşı:" + (time.getFullYear()-birthday.getFullYear()));
+console.log("Fatih'in yaşı:" + (time.getFullYear() - birthday.getFullYear()));
 
 // set methods
 time.setFullYear(2050);
-time.setMonth(time.getMonth()+1);
+time.setMonth(time.getMonth() + 1);
 
 // get methods
 console.log(time.getDate());     // ayın kaçıncı günü
@@ -319,19 +319,46 @@ val = Math.ceil(2.7);
 val = Math.floor(2.4);    // .floor(x) x'i sadece aşağı yuvarlar.
 val = Math.floor(2.7);
 val = Math.sqrt(64);      // .sqrt(x) x'in karekökünü alır.
-val = Math.pow(3,3);      // .sqrt(x,y) x üzeri y'yi hesaplar.
+val = Math.pow(3, 3);      // .sqrt(x,y) x üzeri y'yi hesaplar.
 val = Math.abs(-100);     // .abs(x) x'in mutlak değerini alır.
-val = Math.min(2,3,4);    // .min(x,y,z) sayı dizisindeki en küçük sayıyı verir.
-val = Math.max(2,3,4);    // .max(x,y,z) sayı dizisindeki en büyük sayıyı verir.
+val = Math.min(2, 3, 4);    // .min(x,y,z) sayı dizisindeki en küçük sayıyı verir.
+val = Math.max(2, 3, 4);    // .max(x,y,z) sayı dizisindeki en büyük sayıyı verir.
 val = Math.random()       // .random() rastgele sayı getirir.
 
 // val = Math.floor(Math.random()*100+1) 
 // 0-100 arasında rastgele değerler getirdik.
 // rastgele resimler getirmek için resimlere bu şekilde değerler atanabilir.
 
-val = Math.floor(Math.random()*100+1)
+val = Math.floor(Math.random() * 100 + 1)
 
 console.log(val);
 console.log(typeof val);
 
 //*** STRİNGS ***//
+
+const first_name = "Fatih";
+const last_name = "Şahin";
+let vat;
+
+// string concat (birleştirme)
+
+val = first_name + " " + last_name // değerler arasında boşluk bırakmak için " " eklenir.
+val = "Fatih";
+val += "Şahin"; // val değeri += ile birleştirilebilir.
+val = first_name.concat(" ", last_name); // val değerleri .concat(); ile de birleştirilebilir.
+
+val = "Benim adım " + first_name + " " + "ve yaşım " + age;
+
+/*
+string ifadeler 'tek tırnak' ya da "çift tırnak" içine alınır. 
+kesme işaretini belirtmek için öncesinde ters slash (\') kullanılır.
+*/
+
+val = 'Bursa\'da yaşıyorum.'; 
+
+// string lenght (karakter sayısı)
+
+val = val.length;
+
+console.log(val);
+console.log(typeof val);
