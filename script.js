@@ -319,10 +319,10 @@ val = Math.ceil(2.7);
 val = Math.floor(2.4);    // .floor(x) x'i sadece aşağı yuvarlar.
 val = Math.floor(2.7);
 val = Math.sqrt(64);      // .sqrt(x) x'in karekökünü alır.
-val = Math.pow(3, 3);      // .sqrt(x,y) x üzeri y'yi hesaplar.
+val = Math.pow(3, 3);     // .sqrt(x,y) x üzeri y'yi hesaplar.
 val = Math.abs(-100);     // .abs(x) x'in mutlak değerini alır.
-val = Math.min(2, 3, 4);    // .min(x,y,z) sayı dizisindeki en küçük sayıyı verir.
-val = Math.max(2, 3, 4);    // .max(x,y,z) sayı dizisindeki en büyük sayıyı verir.
+val = Math.min(2, 3, 4);  // .min(x,y,z) sayı dizisindeki en küçük sayıyı verir.
+val = Math.max(2, 3, 4);  // .max(x,y,z) sayı dizisindeki en büyük sayıyı verir.
 val = Math.random()       // .random() rastgele sayı getirir.
 
 // val = Math.floor(Math.random()*100+1) 
@@ -338,16 +338,14 @@ console.log(typeof val);
 
 const first_name = "Fatih";
 const last_name = "Şahin";
-let vat;
 
 // string concat (birleştirme)
 
-val = first_name + " " + last_name // değerler arasında boşluk bırakmak için " " eklenir.
+val = "val değerleri + ile eklenerek, += ya da .contact(x,y) ile birlşetirilebilir."
+val = first_name + " " + last_name
+val = first_name.concat(" ", last_name);
 val = "Fatih";
-val += "Şahin"; // val değeri += ile birleştirilebilir.
-val = first_name.concat(" ", last_name); // val değerleri .concat(); ile de birleştirilebilir.
-
-val = "Benim adım " + first_name + " " + "ve yaşım " + age;
+val += "Şahin";
 
 /*
 string ifadeler 'tek tırnak' ya da "çift tırnak" içine alınır. 
@@ -356,9 +354,33 @@ kesme işaretini belirtmek için öncesinde ters slash (\') kullanılır.
 
 val = 'Bursa\'da yaşıyorum.'; 
 
-// string lenght (karakter sayısı)
+// string lenght 
 
+val = "val değerinin karakter sayısını görüntüler."
 val = val.length;
+
+// string uppercase - lowercase
+
+val = "lowercase harfleri küçültür, uppercase harfleri büyütür."
+val = val.toUpperCase();
+val = val.toLowerCase();
+
+// string indexOf
+
+val = "harf veya kelimenin 0'dan başlayarak index numarasını (sırasını) verir. harf bulunamazsa -1 gözükür."
+val = val.indexOf("veya")
+
+// substring
+
+val = "başlangıç ve bitiş index değerleri arasındaki kısmı getirir."
+val = val.substring(35,43);
+
+// slice
+
+val = "substring ile aynı işlevi görür. tek değer girilirse o değerden itibaren ifadenin tamamını görüntüler."
+val = val.slice(82);
+
+
 
 console.log(val);
 console.log(typeof val);
