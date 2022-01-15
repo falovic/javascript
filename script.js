@@ -334,3 +334,4 @@ val = Math.floor(Math.random()*100+1)
 console.log(val);
 console.log(typeof val);
 
+//*** STRİNGS ***//
