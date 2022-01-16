@@ -375,12 +375,19 @@ val = val.indexOf("veya")
 val = "başlangıç ve bitiş index değerleri arasındaki kısmı getirir."
 val = val.substring(35,43);
 
-// slice
+// string slice
 
 val = "substring ile aynı işlevi görür. tek değer girilirse o değerden itibaren ifadenin tamamını görüntüler."
 val = val.slice(82);
 
+// string replace
 
+val = "bir x değerini y'ye dönüştürmek için .replace(x,y) kullanılır."
+val = val.replace("dönüştürmek","çevirmek");
+
+// string trim
+
+val = val
 
 console.log(val);
 console.log(typeof val);
