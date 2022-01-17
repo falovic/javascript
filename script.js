@@ -387,7 +387,13 @@ val = val.replace("dönüştürmek","çevirmek");
 
 // string trim
 
-val = val
+val = "     ifadenin başındaki ve sonundaki boşluklar .trim() metodu ile alınabilir.     "
+val = val.trim();
+
+// string split
+
+val = "split bir ifadedeki elemanları seçilen karakterden (boşluk) itibaren ayırarak dizi haline getirir."
+val = val.split(" ");
 
 console.log(val);
 console.log(typeof val);
