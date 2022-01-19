@@ -431,13 +431,13 @@ console.log(typeof val);
 val = "boş bir dizi elemanı console'a yazdırıldığında kullanılabilecek tüm metodlar görüntülenir."
 let empty = [];
 console.log(empty);
-console.log(typeof empty);
 
 let names = ["deniz", "sena", "ada", "cenk"];
 let years = [2017, 1999, 2012, 2010];
 let mix = ["fatih", "şahin", 1983, null, undefined, ["oyun", "kitap"]];
 
 // get array item
+
 console.log(names[0]);
 console.log(names[3]);
 
@@ -446,11 +446,45 @@ console.log(names[3]);
 val = "dizideki eleman farklı bir elemanla değiştirilebilir."
 names[0] = "emel"
 
-val = "diziye extra eleman eklenebilir. bunun için dizinin lenght'i seçilir."
+val = "diziye extra eleman eklemek için dizinin lenght'i seçilir."
 names[names.lenght] = "burak"
 
 // add item
 
+val = ".push() dizinin son elemanı olarak atar."
+val = ".unshift() dizinin ilk elemanı olarak atar."
+years.push(1984);
+years.unshift(1997);
+
+// remove item
+
+val = ".pop() dizinin son elemanını siler."
+val = ".shift() diziinn ilk elemanını siler."
+years.pop();
+years.shift();
+
+// indexof
+
+val = "index numarasını verir, eleman bulunamazsa -1 değerini alır."
+let index = names.indexOf("ada");
+console.log("index:"+index);
+
+// reverse
+
+val = ".reverse() diziyi ters çevirir."
+names.reverse();
+
+// sort
+
+val = ".sort() ile dizi sayısal ya da alfabetik olark sıralanır."
+names.sort();
+years.sort();
+
+// concat
+
+cal = ".concat() ile birden fazla dizi birleştirilir."
+console.log(names.concat(years));
 
 console.log(names);
+console.log(years);
 console.log(mix);
