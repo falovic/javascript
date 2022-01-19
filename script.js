@@ -147,7 +147,7 @@ console.log(typeof car)
 // Reference Types - Objects //
 
 // 'array' = sıralı dizinler için kullanılır.
-let names = ['Jack', 'Neo', 'Max']
+// let names = ['Jack', 'Neo', 'Max']
 
 // 'object'
 let adress = {
@@ -419,7 +419,7 @@ val = `my name is ${fullname} I'm ${2022 - birth} years old and I live in ${city
 
 // ternary operator
 val = "koşul içeren soru sorarak true/false karşılığında farklı cevapların cümlede yer almasını sağlayabiliriz."
-val = `my name is ${fullname} I'm ${2022 - birth>=18?"over 18":"under 18"} years old and I live in ${city}`;
+val = `my name is ${fullname} I'm ${2022 - birth >= 18 ? "over 18" : "under 18"} years old and I live in ${city}`;
 
 console.log(val);
 console.log(typeof val);
@@ -428,3 +428,29 @@ console.log(typeof val);
 //*** DİZİLER ***/
 /***************/
 
+val = "boş bir dizi elemanı console'a yazdırıldığında kullanılabilecek tüm metodlar görüntülenir."
+let empty = [];
+console.log(empty);
+console.log(typeof empty);
+
+let names = ["deniz", "sena", "ada", "cenk"];
+let years = [2017, 1999, 2012, 2010];
+let mix = ["fatih", "şahin", 1983, null, undefined, ["oyun", "kitap"]];
+
+// get array item
+console.log(names[0]);
+console.log(names[3]);
+
+// set array item
+
+val = "dizideki eleman farklı bir elemanla değiştirilebilir."
+names[0] = "emel"
+
+val = "diziye extra eleman eklenebilir. bunun için dizinin lenght'i seçilir."
+names[names.lenght] = "burak"
+
+// add item
+
+
+console.log(names);
+console.log(mix);
