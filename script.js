@@ -8,7 +8,7 @@
 // 051 - DEĞİŞKENLER
 // 209 - OPERATÖRLER
 // 284 - VERİ YAPILARI
-// DİZİLER
+// 428 - DİZİLER
 // KOŞUL İFADELERİ
 // DÖNGÜLER
 // FONKSİYONLAR
@@ -352,7 +352,7 @@ string ifadeler 'tek tırnak' ya da "çift tırnak" içine alınır.
 kesme işaretini belirtmek için öncesinde ters slash (\') kullanılır.
 */
 
-val = 'Bursa\'da yaşıyorum.'; 
+val = 'Bursa\'da yaşıyorum.';
 
 // string lenght 
 
@@ -367,13 +367,23 @@ val = val.toLowerCase();
 
 // string indexOf
 
-val = "harf veya kelimenin 0'dan başlayarak index numarasını (sırasını) verir. harf bulunamazsa -1 gözükür."
+val = "harf veya kelimenin 0'dan başlayarak index numarasını (sırasını) verir. harf bulunamazsa -1 döndürür."
 val = val.indexOf("veya")
+
+// string includes
+
+val = "harf veya kelimeyi sorgular. bulursa true, bulamazsa false değeri döndürür."
+val = val.includes("veya")
+
+// string startsWith
+
+val = "ifadenin başladığı değeri sorgulayarak true/false döndürür."
+val = val.startsWith("ifade");
 
 // substring
 
 val = "başlangıç ve bitiş index değerleri arasındaki kısmı getirir."
-val = val.substring(35,43);
+val = val.substring(35, 43);
 
 // string slice
 
@@ -383,7 +393,11 @@ val = val.slice(82);
 // string replace
 
 val = "bir x değerini y'ye dönüştürmek için .replace(x,y) kullanılır."
-val = val.replace("dönüştürmek","çevirmek");
+val = val.replace("dönüştürmek", "çevirmek");
+
+/*
+.replace ile tüm değerler değiştirilmek istendiğinde /.../g ile (/değer1/g, "değer2") şeklinde yazılır.
+*/
 
 // string trim
 
@@ -395,5 +409,22 @@ val = val.trim();
 val = "split bir ifadedeki elemanları seçilen karakterden (boşluk) itibaren ayırarak dizi haline getirir."
 val = val.split(" ");
 
+//*** TEMPLATE LİTERALS ***//
+
+val = "ters tırnak açıp, ${...} kullanarak dinamik ifadeleri direkt cümle içine yerleştirebiliriz."
+
+let birth = 1997;
+val = "my name is " + fullname + " I\'m " + (2022 - birth) + " years old " + "and I live in " + city;
+val = `my name is ${fullname} I'm ${2022 - birth} years old and I live in ${city}`;
+
+// ternary operator
+val = "koşul içeren soru sorarak true/false karşılığında farklı cevapların cümlede yer almasını sağlayabiliriz."
+val = `my name is ${fullname} I'm ${2022 - birth>=18?"over 18":"under 18"} years old and I live in ${city}`;
+
 console.log(val);
 console.log(typeof val);
+
+///***************/
+//*** DİZİLER ***/
+/***************/
+
