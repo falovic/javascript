@@ -433,7 +433,7 @@ let empty = [];
 console.log(empty);
 
 let names = ["deniz", "sena", "ada", "cenk"];
-let years = [2017, 1999, 2012, 2010];
+let years = [2017, 1999, 2012, 2010, 1984, 1977, 2001];
 let mix = ["fatih", "şahin", 1983, null, undefined, ["oyun", "kitap"]];
 
 // get array item
@@ -467,7 +467,7 @@ years.shift();
 
 val = "index numarasını verir, eleman bulunamazsa -1 değerini alır."
 let index = names.indexOf("ada");
-console.log("index:"+index);
+console.log("index:" + index);
 
 // reverse
 
@@ -482,9 +482,32 @@ years.sort();
 
 // concat
 
-cal = ".concat() ile birden fazla dizi birleştirilir."
+val = ".concat() ile birden fazla dizi birleştirilir."
 console.log(names.concat(years));
+
+// splice
+
+val = ".splice(x,y,'z') x'ten itibaren y tane eleman siler ve sonuna 'z' elemanını ekler."
+names.splice(3, 1, "seda");
 
 console.log(names);
 console.log(years);
 console.log(mix);
+
+// find
+val = ".find() metodu, dizide koşulu sağlayan ilk elemanı getirir."
+
+function over18(year) {
+   let age = 2022 - year;
+   return (age >= 18);
+}
+console.log(years.find(over18));
+
+// filter
+val = ".filter() metodu, dizide koşulu sağlayan tüm elemanları getirir."
+
+function over18(year) {
+   let age = 2022 - year;
+   return (age >= 18);
+}
+console.log(years.filter(over18));
