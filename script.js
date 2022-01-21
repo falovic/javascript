@@ -518,6 +518,7 @@ console.log(years.filter(over18));
 
 // if & else statements
 
+val = "if & else yapısında true değer için if, false değer için else kısmına değer girilir."
 const name2 = "Fatih";
 const age2 = 25;
 const isStudent = true;
@@ -527,6 +528,37 @@ if (name2 == "Fatih") {
    console.log("Merhaba Fatih");
 }
 
-if (age2 == 25) {
-   console.log("Yaşınız 25");
+if (age2 >= 18) {
+   if ((school == "university") || (school == "university")) {
+      console.log("Ehliyet alabilirsiniz.")
+   }
+   else {
+      console.log("Eğitim durumunuz yetersiz, ehliyet alamazsınız.")
+   }
+}
+else {
+   console.log("Yaşınız yetersiz, ehliyet alamazsınız.")
+}
+
+val = "koşulları artırmak için 'else if' kalıbı kullanılır."
+
+if (age2 > 0 && age2 < 12) {
+   console.log(`${name2} is a child.`);
+}
+else if (age2 >= 13 && age2 < 19) {
+   console.log(`${name2} is a teenager.`);
+}
+else {
+   console.log(`${name2} is a adult.`);
+}
+
+val = "değişkenin 'undefined' olmaması durumunda id değerinin yazdırılmasını sağlayalım."
+
+let id = "6651"
+
+if (typeof id !== "undefined") {
+   console.log("ID:"+id)
+}
+else {
+   console.log("No ID")
 }
