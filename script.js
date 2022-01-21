@@ -9,7 +9,7 @@
 // 209 - OPERATÖRLER
 // 284 - VERİ YAPILARI
 // 428 - DİZİLER
-// KOŞUL İFADELERİ
+// 513 - KOŞUL İFADELERİ
 // DÖNGÜLER
 // FONKSİYONLAR
 // DOM
@@ -56,7 +56,7 @@ var age;
 console.log(age);
 
 // 'age' değişkenine '20' değerini ve 'fullname' değişkenine 'fatih şahin' değerini atayalım.
-var age = 25;
+// var age = 25;
 console.log(age);
 var fullname = 'fatih şahin';
 console.log(fullname);
@@ -511,3 +511,22 @@ function over18(year) {
    return (age >= 18);
 }
 console.log(years.filter(over18));
+
+///***********************/
+//*** KOŞUL İFADELERİ ***/
+/***********************/
+
+// if & else statements
+
+const name2 = "Fatih";
+const age2 = 25;
+const isStudent = true;
+const school = "university";
+
+if (name2 == "Fatih") {
+   console.log("Merhaba Fatih");
+}
+
+if (age2 == 25) {
+   console.log("Yaşınız 25");
+}
