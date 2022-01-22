@@ -557,8 +557,87 @@ val = "değişkenin 'undefined' olmaması durumunda id değerinin yazdırılmas�
 let id = "6651"
 
 if (typeof id !== "undefined") {
-   console.log("ID:"+id)
+   console.log("ID:" + id)
 }
 else {
    console.log("No ID")
 }
+
+// switch statements
+
+val = "1. koşulların çok fazla olduğu durumalarda 'switch' kullanılır."
+"2. switch ifade alanına yazılan değer ile case değerlerini sırayla karşılaştırır."
+"3. karşılaştırma sonucunda eşleşme sağlanırsa eşleşen kod bloğundaki komutlar çalıştırılır."
+
+/*
+switch (ifade) {
+   case a:
+   a kod bloğu
+      break;
+   case b:
+   b kod bloğu
+      break;
+   default:
+   varsayılan kod bloğu
+}
+*/
+
+let category = "beyaz eşya";
+
+switch (category) {
+   case "telefon":
+      console.log("telefon kategorisi");
+      break;
+   case "bilgisayar":
+      console.log("bilgisayar kategorisi");
+      break;
+   default:
+      console.log("yanlış kategori")
+}
+
+val = "bugünün haftanın hangi günü olduğunu bulalım."
+
+let day;
+
+switch (new Date().getDay()) {
+   case 0:
+      day = "pazar";
+      break;
+   case 1:
+      day = "pazartesi";
+      break;
+   case 2:
+      day = "salı";
+      break;
+   case 3:
+      day = "çarşamba";
+      break;
+   case 4:
+      day = "perşembe";
+      break;
+   case 5:
+      day = "cuma";
+      break;
+   case 6:
+      day = "cumartesi";
+      break;
+}
+
+console.log(`bugün günlerden ${day}`);
+
+val = "koşulları birleştirmek de mümkündür."
+
+switch (new Date().getDay()) {
+   case 0:
+   case 6:
+      day = "hafta sonu";
+      break;
+   case 1:
+   case 2:
+   case 3:
+   case 4:
+   case 5:
+      day = "hafta içi";
+      break;
+}
+console.log(`bugün ${day}`);
