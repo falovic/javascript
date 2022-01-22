@@ -674,10 +674,12 @@ let person = {
       city: "Bursa",
       country: "Türkiye",
    },
-   get_birth_year: function(){
-      return 2022 - this.age
-   }
+   get_birth_year: function () {
+      return 2022 - this.age;
+   },
 };
+
+val = "herhangi bir nesnesinin (person) bir alt nesnesi (age) seçilirken başına 'this' eklenir."
 
 val = person;
 val = person.first_name;
@@ -690,9 +692,23 @@ val = person.hobbies.lenght;
 val = person.address;
 val = person.address.city;
 val = person.address["city"];
-//val = person.get_birth_year;
+val = person.get_birth_year();
 
 console.log(val);
-console.log(typeof val);
+console.log(typeof person);
 
-console.log(Date.now());
+val = "yukarıda {} içerisine alt nesneleri tanımlamıştık. şimdi de [] içerisine alt dizileri tanımlayalım."
+
+let people = [
+   { first_name: "Fatih", last_name: "Şahin" },
+   { first_name: "Cahit", last_name: "Kahin" },
+   { first_name: "Zahid", last_name: "Tahin" },
+]
+
+val = people[1];
+val = people[2].first_name;
+
+console.log(val);
+console.log(people);
+console.log(typeof people);
+
