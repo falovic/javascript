@@ -9,7 +9,7 @@
 // 209 - OPERATÖRLER
 // 284 - VERİ YAPILARI
 // 428 - DİZİLER
-// 513 - KOŞUL İFADELERİ
+// 516 - KOŞUL İFADELERİ
 // DÖNGÜLER
 // FONKSİYONLAR
 // DOM
@@ -655,3 +655,44 @@ switch (true) {
    default:
       console.log(`${name2} is an adult.`)
 }
+
+/*
+siteye giriş yapınca sorgu ekranı
+prompt("who's there?");
+*/
+
+// object litereals
+
+val = "bir kullanıcı ya da ara"
+
+let person = {
+   first_name: "Fatih",
+   last_name: "Şahin",
+   age: 25,
+   hobbies: ["camp", "code", "game"],
+   address: {
+      city: "Bursa",
+      country: "Türkiye",
+   },
+   get_birth_year: function(){
+      return 2022 - this.age
+   }
+};
+
+val = person;
+val = person.first_name;
+val = person.last_name;
+val = person["first_name"];
+val = person.age;
+val = person.hobbies;
+val = person.hobbies[1];
+val = person.hobbies.lenght;
+val = person.address;
+val = person.address.city;
+val = person.address["city"];
+//val = person.get_birth_year;
+
+console.log(val);
+console.log(typeof val);
+
+console.log(Date.now());
