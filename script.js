@@ -1,8 +1,8 @@
-// tek satırlık yorum kısımları için double-slash
-
-/* birden fazla satırlı yorum kısımları için slash+star */
+// JS Pill Notes
 
 // (Ctrl+K)+(Ctrl+C) = seçilenlerin alayına double-slash
+
+// (Ctrl+K)+(Ctrl+U) = double-slash geri alınır
 
 // 028 - GİRİŞ
 // 051 - DEĞİŞKENLER
@@ -542,14 +542,16 @@ else {
 
 val = "koşulları artırmak için 'else if' kalıbı kullanılır."
 
-if (age2 > 0 && age2 < 12) {
+// 648'de switch ile yapıldı.
+
+if (age2 >= 0 && age2 < 13) {
    console.log(`${name2} is a child.`);
 }
 else if (age2 >= 13 && age2 < 19) {
    console.log(`${name2} is a teenager.`);
 }
 else {
-   console.log(`${name2} is a adult.`);
+   console.log(`${name2} is an adult.`);
 }
 
 val = "değişkenin 'undefined' olmaması durumunda id değerinin yazdırılmasını sağlayalım."
@@ -622,7 +624,6 @@ switch (new Date().getDay()) {
       day = "cumartesi";
       break;
 }
-
 console.log(`bugün günlerden ${day}`);
 
 val = "koşulları birleştirmek de mümkündür."
@@ -641,3 +642,16 @@ switch (new Date().getDay()) {
       break;
 }
 console.log(`bugün ${day}`);
+
+// 547'de if & else ile yapıldı.
+
+switch (true) {
+   case age2 > 0 && age2 < 12:
+      console.log(`${name2} is a child.`);
+      break;
+   case age2 >= 13 && age2 < 19:
+      console.log(`${name2} is a teenager.`);
+      break;
+   default:
+      console.log(`${name2} is an adult.`)
+}
