@@ -308,7 +308,29 @@ console.log(time.getSeconds());  // saniye
 
 var num = 10.123456789
 
-val = isNaN("10");        // NaN sorugusu yapar.
+val = ".isInteger() yöntemi, sayıların tam sayı olup olmadığını belirler."
+Number.isInteger(123) //true
+Number.isInteger(-123) //true
+Number.isInteger(0.5) //false
+
+val = ".isFinite() yöntemi, bir değerin sonlu bir sayı olup olmadığını belirler."
+Number.isFinite(0) //true
+Number.isFinite('123') //false
+Number.isFinite('Hello') //false
+Number.isFinite(-Infinity) //false
+Number.isFinite(0 / 0) //false
+
+val = ".isNaN() yöntemi, bir değerin NaN (Not-A-Number) olup olmadığını belirler."
+Number.isNaN(123) //false
+Number.isNaN(0) //false
+Number.isNaN('123') //false
+Number.isNaN('Hello') //false
+Number.isNaN('') //false
+Number.isNaN(true) //false
+Number.isNaN(undefined) //false
+Number.isNaN('NaN') //false
+Number.isNaN(NaN) //true
+
 val = num.toPrecision(4); // .toPrecision(x) sayının x kadar basamağını yazdırır. sondaki rakamı yuvarlamaz.
 val = num.toFixed(4);     // .toFixed(x) sayının virgülden sonraki x kadar basamağını yazdırır. sondaki rakamı yuvarlar.
 val = Math.PI;            // pi sayısı
