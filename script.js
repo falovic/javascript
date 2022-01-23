@@ -737,3 +737,24 @@ console.log(typeof people);
 ///****************/
 //*** DÖNGÜLER ***/
 /****************/
+
+// for loop
+
+val = "for döngüsünde, koşul 'true' değeri döndürdüğü sürece köşeli parantezler arasındaki kodlar işletilir."
+"i=0'dır ve i<10 olduğu sürece i++ değere +1 ekleyerek yazdırır."
+"eğer i=3 değerine eşit olursa console `en sevdiğim rakam: ${i}` yazdırır, ardından döngüye devam eder."
+"döngü, `en sevdiğim rakam: ${i}` cümlesinden sonra yine 3'ten devam eder, bunu önlemek için 'continue;' girilir."
+"eğer 'break;' değeri girilirse döngü sona erer ve yazmayı durdurur."
+
+for (let i = 0; i < 10; i++) {
+   if (i == 3) {
+      console.log(`en sevdiğim rakam: ${i}`)
+      continue;
+   }
+   if (i == 6) {
+      console.log(`en sevmediğim rakam: ${i}`)
+      break;
+   }
+   console.log(i);
+}
+
