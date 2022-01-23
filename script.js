@@ -10,7 +10,7 @@
 // 284 - VERİ YAPILARI
 // 428 - DİZİLER
 // 516 - KOŞUL İFADELERİ
-// DÖNGÜLER
+// 716 - DÖNGÜLER
 // FONKSİYONLAR
 // DOM
 // EVENTS
@@ -712,3 +712,6 @@ console.log(val);
 console.log(people);
 console.log(typeof people);
 
+///****************/
+//*** DÖNGÜLER ***/
+/****************/
