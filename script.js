@@ -738,18 +738,18 @@ console.log(typeof people);
 //*** DÖNGÜLER ***/
 /****************/
 
-// for loop
+/*
+döngülerde koşul 'true' değeri döndürdüğü sürece köşeli parantezler arasındaki kodlar işletilir.
+i=0 iken, i<10 olduğu sürece i++ değere +1 ekleyerek yazdırır.
+'break;' değeri girildiğinde döngü sona erer ve yazmayı durdurur.
+*/
 
-val = "for döngüsünde, koşul 'true' değeri döndürdüğü sürece köşeli parantezler arasındaki kodlar işletilir."
-"i=0'dır ve i<10 olduğu sürece i++ değere +1 ekleyerek yazdırır."
-"eğer i=3 değerine eşit olursa console `en sevdiğim rakam: ${i}` yazdırır, ardından döngüye devam eder."
-"döngü, `en sevdiğim rakam: ${i}` cümlesinden sonra yine 3'ten devam eder, bunu önlemek için 'continue;' girilir."
-"eğer 'break;' değeri girilirse döngü sona erer ve yazmayı durdurur."
+// for loop
 
 for (let i = 0; i < 10; i++) {
    if (i == 3) {
-      console.log(`en sevdiğim rakam: ${i}`)
-      continue;
+      console.log(`en sevdiğim rakam: ${i}`) // i=3 olduğunda `en sevdiğim rakam: ${i}` yazdırır, ardından döngüye devam eder.
+      continue;                              // döngü yine 3'ten devam eder, bunu önlemek için 'continue;' girilir.
    }
    if (i == 6) {
       console.log(`en sevmediğim rakam: ${i}`)
@@ -758,3 +758,34 @@ for (let i = 0; i < 10; i++) {
    console.log(i);
 }
 
+// while loop
+
+let i = 0;
+while (i < 10) {
+   console.log(i);
+   i++;
+}
+
+// do-while loop
+
+let ii = 0;
+do {
+   console.log(ii);
+   ii++;
+} while (ii < 10)
+
+val = "sıfıra kadar olan tüm değerlerin toplamı:"
+
+let toplam=0;
+for (let i=10;i>0;i--){
+   toplam+=i
+}
+console.log(toplam);
+
+val = "sıfıra kadar olan tüm değerlerin toplamı:"
+
+let sonuc=0;
+for (let i=10;i>0;i--){
+   sonuc+=i
+}
+console.log(sonuc);
