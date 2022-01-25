@@ -807,3 +807,24 @@ for (let i = 10; i > 0; i--) {
       sonuc4 *= i
 }
 console.log(sonuc4);
+
+// for loop (inception)
+
+val = "i döngüsündeki her bir değer için alt döngü j tam tur yapar."
+
+for (let i = 0; i < 3; i++) {
+   for (let j = 0; j < 3; j++) {
+      console.log(`i: ${i} j: ${j}`)
+   }
+}
+
+val = "alt satıra geçmek için '\n' komutu."
+
+let star = "\n";
+for (let i = 0; i < 10; i++) {
+   for (let j = 0; j < 10; j++) {
+      star += "* "
+   }
+   star += "\n";
+}
+console.log(star);
