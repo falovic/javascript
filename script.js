@@ -774,18 +774,36 @@ do {
    ii++;
 } while (ii < 10)
 
-val = "sıfıra kadar olan tüm değerlerin toplamı:"
+val = "10'dan 0'a kadar olan tüm değerlerin toplamı:"
 
-let toplam=0;
-for (let i=10;i>0;i--){
-   toplam+=i
+let sonuc1 = 0;
+for (let i = 10; i > 0; i--) {
+   sonuc1 += i
 }
-console.log(toplam);
+console.log(sonuc1);
 
-val = "sıfıra kadar olan tüm değerlerin toplamı:"
+val = "10'dan 0'a kadar olan tüm değerlerin çarpımı:"
 
-let sonuc=0;
-for (let i=10;i>0;i--){
-   sonuc+=i
+let sonuc2 = 1;
+for (let i = 10; i > 0; i--) {
+   sonuc2 *= i
 }
-console.log(sonuc);
+console.log(sonuc2);
+
+val = "10'dan 0'a kadar olan tüm çift değerlerin çarpımı:" // i mod 2 = 0 
+
+let sonuc3 = 1;
+for (let i = 10; i > 0; i--) {
+   if (i % 2 == 0)
+      sonuc3 *= i
+}
+console.log(sonuc3);
+
+val = "10'dan 0'a kadar olan tüm tek değerlerin çarpımı:" //  i mod 2 = 1
+
+let sonuc4 = 1;
+for (let i = 10; i > 0; i--) {
+   if (i % 2 == 1)
+      sonuc4 *= i
+}
+console.log(sonuc4);
