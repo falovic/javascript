@@ -841,9 +841,7 @@ for (let i = 0; i < people.length; i++) { // let people (724)
    console.log(people[i].first_name);
 }
 
-// for-in
-
-// arrays
+// for-ins
 
 for (let i in cars) {
    console.log(`index: ${i} value: ${cars[i]}`);
@@ -853,11 +851,33 @@ for (let i in people) {
    console.log(`index: ${i} value: ${people[i].last_name}`);
 }
 
-// object
+// .forEach()
 
-// foreach
+val = "dizideki her bir eleman sırayla function içerisindeki 'item' değişkenine kopyalanır."
 
-val = "cars dizisindeki her bir eleman sırayla function içerisindeki 'item' değişkenine kopyalanır."
 cars.forEach(function (item) {
    console.log(item);
 })
+
+people.forEach(function (item) {
+   console.log(item);
+})
+
+// .map() (returns an array)
+
+val = "val2 isimli bir değer tanımladık, bu değer yeni bir dizi oluşturacak."
+".map() objesinin içinde bir fonksiyon oluşturduk."
+"people'da yer alan elemanların her biri function'daki 'item' değişkenine aktarılır/kopyalanır."
+"return, bize gelen item değerinin isim ve soyismini birleştirerek arada bir boşluk bıraksın."
+"daha sonra bunları bir dizi olarak yollasın."
+
+let val2 = people.map(function (item) {
+   return item.first_name + " " + item.last_name;
+})
+console.log(val2);
+
+val = "bir diğer örnekte return ile numbers değerlerinin karelerini geri döndürelim."
+
+let numbers = [1, 5, 6, 8, 10];
+let nm = numbers.map(function (n) { return n * n; })
+console.log(nm);
