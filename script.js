@@ -810,7 +810,7 @@ console.log(sonuc4);
 
 // for loop (inception)
 
-val = "i döngüsündeki her bir değer için alt döngü j tam tur yapar."
+val = "i döngüsündeki her bir değer için j alt döngüsü tam tur yapar."
 
 for (let i = 0; i < 3; i++) {
    for (let j = 0; j < 3; j++) {
@@ -828,3 +828,36 @@ for (let i = 0; i < 10; i++) {
    star += "\n";
 }
 console.log(star);
+
+// loop in arrays & objects
+
+let cars = ["Bmw", "Mercedes", "Toyota"];
+
+for (let i = 0; i < cars.length; i++) {
+   console.log(cars[i]);
+}
+
+for (let i = 0; i < people.length; i++) { // let people (724)
+   console.log(people[i].first_name);
+}
+
+// for-in
+
+// arrays
+
+for (let i in cars) {
+   console.log(`index: ${i} value: ${cars[i]}`);
+}
+
+for (let i in people) {
+   console.log(`index: ${i} value: ${people[i].last_name}`);
+}
+
+// object
+
+// foreach
+
+val = "cars dizisindeki her bir eleman sırayla function içerisindeki 'item' değişkenine kopyalanır."
+cars.forEach(function (item) {
+   console.log(item);
+})
