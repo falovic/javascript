@@ -11,7 +11,7 @@
 // 450 - DİZİLER
 // 538 - KOŞUL İFADELERİ
 // 738 - DÖNGÜLER
-// FONKSİYONLAR
+// 886 - FONKSİYONLAR
 // DOM
 // EVENTS
 // LOCAL-STORAGE
@@ -881,3 +881,7 @@ val = "bir diğer örnekte return ile numbers değerlerinin karelerini geri dön
 let numbers = [1, 5, 6, 8, 10];
 let nm = numbers.map(function (n) { return n * n; })
 console.log(nm);
+
+///********************/
+//*** FONKSİYONLAR ***/
+/********************/
