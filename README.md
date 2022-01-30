@@ -1,2 +1,2 @@
-# javascript
-javascript pill notes
+# Javascript
+> - Javascript hap bilgiler.
