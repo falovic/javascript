@@ -885,3 +885,36 @@ console.log(nm);
 ///********************/
 //*** FONKSİYONLAR ***/
 /********************/
+
+val = "herhangi bir  işleme sıklıkla başvuracaksak, fonksiyon haline getirerek kullanabiliriz."
+
+function yasHesapla(dogumYili) {
+   return 2022 - dogumYili;
+}
+
+let ageFatih = yasHesapla(1997)
+let ageCeren = yasHesapla(2000)
+let ageDeniz = yasHesapla(1991)
+
+console.log(ageFatih);
+console.log(ageCeren);
+console.log(ageDeniz);
+
+val = "fonsiyon içinde fonksiyon kullanmak mümkündür."
+
+function emeklilikYasi(dogumYili, isim) {
+   let yas = yasHesapla(dogumYili);
+   let emeklilik = 65 - yas;
+   let tarih = dogumYili + 65;
+
+   if (emeklilik > 0) {
+      console.log(`${isim} emekli olmana ${emeklilik} yıl kaldı.`);
+   } else {
+      console.log(`${isim} ${tarih} yılında emekli oldun.`)
+   }
+}
+
+emeklilikYasi(1997, "Fatih");
+emeklilikYasi(2000, "Ceren");
+emeklilikYasi(1991, "Deniz");
+emeklilikYasi(1940, "Rıfat");
