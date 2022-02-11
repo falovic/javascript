@@ -52,11 +52,11 @@ console.log([1, 2, 3])
 /*******************/
 
 // bir değişkene değer atanmazsa 'undefined' olarak gözükür.
-var age;
-console.log(age);
+var agge;
+console.log(agge);
 
 // 'age' değişkenine '20' değerini ve 'fullname' değişkenine 'fatih şahin' değerini atayalım.
-// var age = 25;
+var age = 25;
 console.log(age);
 var fullname = 'fatih şahin';
 console.log(fullname);
@@ -971,14 +971,14 @@ console.log(sumAll(10, 20, 30, 40));
 val = "sayfada tanımlanan her bir eleman 'window' objesinin bir elemanı haline gelir."
 
 /* alert */
-alert('Merhaba');
+// alert('Merhaba');
 
 /* promt */
-var e = prompt("Bir sayı giriniz.")
-console.log(e);
+// var e = prompt("Bir sayı giriniz.")
+// console.log(e);
 
 /* confirm */
-val = confirm('Emin misiniz?');
+// val = confirm('Emin misiniz?');
 
 if (val) {
    console.log('ok');
@@ -1007,3 +1007,26 @@ val = window.location.protocol;
 
 console.log(val);
 
+// scopes
+
+val = "fonksiyonlar, lokal scope oluşturur. fonksiyon içinde tanımlanan değişkene dışarıdan ulaşılamaz."
+val = "blocklar (if, switch) global scope oluşturur. block içinde tanımlanan değişkene dışarıdan erişilebilir."
+
+/* local scopes */
+
+function logModel() {
+   var moddel = 'Oper';
+   let yeaar = 2016;
+   const collor = 'white';
+   console.log('block scope', moddel, yeaar, collor)
+}
+
+
+/* global scopes */
+
+if (true) {
+   var moddel = 'Oper';
+   let yeaar = 2016;
+   const collor = 'white';
+   console.log('block scope', moddel, yeaar, collor)
+}
