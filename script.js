@@ -965,3 +965,45 @@ function sumAll() {
 }
 
 console.log(sumAll(10, 20, 30, 40));
+
+// window object
+
+val = "sayfada tanımlanan her bir eleman 'window' objesinin bir elemanı haline gelir."
+
+/* alert */
+alert('Merhaba');
+
+/* promt */
+var e = prompt("Bir sayı giriniz.")
+console.log(e);
+
+/* confirm */
+val = confirm('Emin misiniz?');
+
+if (val) {
+   console.log('ok');
+} else {
+   console.log('no');
+}
+
+/* scroll */
+
+val = "scrollbar'ın konum bilgisini yazdırır."
+
+val = window.scrollX;
+val = window.scrollY;
+
+console.log(val);
+
+/* location */
+
+val = "adres bilgilerini yazdırır."
+
+val = window.location;
+val = window.location.href;
+val = window.location.hostname;
+val = window.location.host;
+val = window.location.protocol;
+
+console.log(val);
+
