@@ -4,15 +4,15 @@
 
 // (Ctrl+K)+(Ctrl+U) = double-slash geri alınır
 
-// 028 - GİRİŞ
-// 051 - DEĞİŞKENLER
-// 209 - OPERATÖRLER
-// 284 - VERİ YAPILARI
-// 450 - DİZİLER
-// 538 - KOŞUL İFADELERİ
-// 738 - DÖNGÜLER
-// 886 - FONKSİYONLAR
-// DOM
+// 0028 - GİRİŞ
+// 0051 - DEĞİŞKENLER
+// 0209 - OPERATÖRLER
+// 0284 - VERİ YAPILARI
+// 0450 - DİZİLER
+// 0538 - KOŞUL İFADELERİ
+// 0738 - DÖNGÜLER
+// 0886 - FONKSİYONLAR
+// 1035 - DOM
 // EVENTS
 // LOCAL-STORAGE
 // JQUERY
@@ -1010,7 +1010,8 @@ console.log(val);
 // scopes
 
 val = "fonksiyonlar, lokal scope oluşturur. fonksiyon içinde tanımlanan değişkene dışarıdan ulaşılamaz."
-val = "blocklar (if, switch) global scope oluşturur. block içinde tanımlanan değişkene dışarıdan erişilebilir."
+val = "blocklarda (if, switch) 'var' değişkeni kullanılırsa global scope oluşturur."
+val = "blocklarda (if, switch) 'let' ve 'const' kullanılmalıdır."
 
 /* local scopes */
 
@@ -1021,7 +1022,6 @@ function logModel() {
    console.log('block scope', moddel, yeaar, collor)
 }
 
-
 /* global scopes */
 
 if (true) {
@@ -1030,3 +1030,64 @@ if (true) {
    const collor = 'white';
    console.log('block scope', moddel, yeaar, collor)
 }
+
+///***********/
+//*** DOM ***/
+/***********/
+
+val = "html dosyası içindeki herhang bir elemana document vasıtasyıla ulaşılabilir. document, window'un alt nesnesidir."
+
+val = window.document;
+val = document.all;
+val = document.all.lenght;
+val = document.all[10];
+val = document.head;
+val = document.body;
+val = document.anchors;
+val = document.URL;
+val = document.domain;
+val = document.images;
+val = document.title;
+val = document.scripts;
+
+console.log(val);
+
+// selecting elements
+
+/* single elements */
+
+val = "tek bir id'ye sahip elemanı seçerken '.getEelementbyId();' metodu kullanılır."
+
+/*
+document.getElementById('header');
+val.style.fontSize='12px';
+val.style.color='red';
+val.style.fontWeight='bold';
+*/
+
+/* multiple elements */
+
+val = "aynı class'a sahip bütün elemanları seçmek için '.getElementsByClassName();' metodu kullanılır."
+
+/*
+val = document.getElementsByClassName('item-class')[5]; // beşinci eleman seçildi.
+val = val[5];
+val[1].style.color='blue';
+val[1].style.fontSize='25px';
+val[2].textContent='new item';
+*/
+
+val = "çoklu seçim için '.querySelector();' metodu kullanılır. id başına # ve class başına . koyulur."
+
+/*
+document.querySelector('#header');
+document.querySelector('.card-header');
+document.querySelector('div');
+*/
+
+val = "bir elemanın içeriğini değiştirmek için .innerText ve .textContent kullanılır."
+
+/*
+document.querySelector('span').innerText = 'Lorem ipsum dolor sit amet.';
+document.querySelector('span').textContent = 'Lorem ipsum dolor sit amet.';
+*/
