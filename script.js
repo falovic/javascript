@@ -1104,3 +1104,32 @@ val.forEach(function(item){
    item.style.background='#ccc';
 });
 */
+
+// traversing the DOM
+
+val = "alt elemanlara 'child' ile, üst elemanlara 'parent' ile ulaşılır."
+
+/*
+let val;
+
+val = list.children[0]
+val = list.children[2]
+
+val = list.children[2].textContent='new item';
+val = list.children[2].children;
+
+val = list.firstChild;
+val = list.firstElementChild;
+
+val = list.lastChild;
+val = list.lastElementChild;
+
+val = list.childElementCount;
+val = list.parentNode;
+
+val = list.children[0].nextSibling;          // sonraki eleman
+val = list.children[0].nextElementSibling;
+
+val = list.children[0].previousSibling;      // önceki eleman
+val = list.children[0].previousElementSibling;
+*/
