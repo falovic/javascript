@@ -1156,13 +1156,63 @@ li.appendChild(text);
 const ax = document.createElement('a');
 ax.setAttribute('href', '#');
 ax.className = 'delete-item float-right';
-ax.innerHTML= '<i class="fas fa-times"></i>';
+ax.innerHTML = '<i class="fas fa-times"></i>';
 
 /* append a to li */
 li.appendChild(ax);
 
 /* append li to ul */
-document.querySelector('#task-list').appendChild(li);
 
-
+// document.querySelector('#task-list').appendChild(li);
 console.log(li);
+
+// remove elements
+
+/* removing element */
+
+/*
+taskList.remove();
+taskList.childNodes[7].remove();
+taskList.children[3].remove();
+taskList.removeChild(taskList.children[3]);
+*/
+
+/* removing attribute */
+
+/*
+taskList.children[1].removeAttribute('class');
+for (let i = 0; i < taskList.children.lenght; i++) {
+   taskList.children[i].removeAttribute('class');
+}
+*/
+
+/* replacing element */
+
+/*
+const parent = document.querySelector('.card');
+parent.replaceChild(new-child,old-child);
+*/
+
+/* replacing classes */
+
+/*
+let val;
+
+link = taskList.children[0].children[0];
+
+val = link.className;
+val = link.classList;
+val = link.classList[0];
+val = link.classList[1];
+
+link.classList.add('new');
+link.classList.remove('new');
+*/
+
+/* attribute */
+
+/*
+val = link.getAttribute('href');                       // attribute seçme
+val = link.setAttribute('href','https://github.com');  // attribute değiştirme
+val = link.hasAttribute('data');                       // attribute var mı sorgusu
+*/
