@@ -1133,3 +1133,36 @@ val = list.children[0].nextElementSibling;
 val = list.children[0].previousSibling;      // önceki eleman
 val = list.children[0].previousElementSibling;
 */
+
+// creating elements
+
+val = "aşamalı olarak bir element oluşturalım."
+
+/* create element */
+
+const li = document.createElement('li');
+
+/* add class */
+li.className = 'list-group';
+
+/* attribute */
+li.setAttribute('title', 'new item');
+li.setAttribute('data-id', '5');
+
+/* text node */
+const text = document.createTextNode('new item');
+li.appendChild(text);
+
+const ax = document.createElement('a');
+ax.setAttribute('href', '#');
+ax.className = 'delete-item float-right';
+ax.innerHTML= '<i class="fas fa-times"></i>';
+
+/* append a to li */
+li.appendChild(ax);
+
+/* append li to ul */
+document.querySelector('#task-list').appendChild(li);
+
+
+console.log(li);
