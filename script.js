@@ -1035,7 +1035,7 @@ if (true) {
 //*** DOM ***/
 /***********/
 
-val = "html dosyası içindeki herhang bir elemana document vasıtasyıla ulaşılabilir. document, window'un alt nesnesidir."
+val = "html dosyası içindeki herhangi bir elemana document vasıtasyıla ulaşılabilir. document, window'un alt nesnesidir."
 
 val = window.document;
 val = document.all;
@@ -1052,17 +1052,33 @@ val = document.scripts;
 
 console.log(val);
 
+
+val = "bir elemanın içeriğini değiştirmek için .innerText ve .textContent kullanılır."
+
+/*
+document.querySelector('span').innerText = 'Lorem ipsum dolor sit amet.';
+document.querySelector('span').textContent = 'Lorem ipsum dolor sit amet.';
+*/
+
 // selecting elements
 
 /* single elements */
 
-val = "tek bir id'ye sahip elemanı seçerken '.getEelementbyId();' metodu kullanılır."
+val = "id'ye sahip elemanı seçerken '.getEelementbyId();' metodu kullanılır."
 
 /*
 document.getElementById('header');
 val.style.fontSize='12px';
 val.style.color='red';
 val.style.fontWeight='bold';
+*/
+
+val = "id veya class ile seçim yaparken '.querySelector();' metodu kullanılır. id başına # ve class başına . koyulur."
+
+/*
+document.querySelector('#header');
+document.querySelector('.card-header');
+document.querySelector('div');
 */
 
 /* multiple elements */
@@ -1077,17 +1093,14 @@ val[1].style.fontSize='25px';
 val[2].textContent='new item';
 */
 
-val = "çoklu seçim için '.querySelector();' metodu kullanılır. id başına # ve class başına . koyulur."
+val = "elemanlar '.querySelectorAll();' metodu kullanılarak çoklu seçilebilir."
 
 /*
-document.querySelector('#header');
-document.querySelector('.card-header');
-document.querySelector('div');
-*/
-
-val = "bir elemanın içeriğini değiştirmek için .innerText ve .textContent kullanılır."
-
-/*
-document.querySelector('span').innerText = 'Lorem ipsum dolor sit amet.';
-document.querySelector('span').textContent = 'Lorem ipsum dolor sit amet.';
+val = document.querySelectorAll('li');
+val = document.querySelectorAll('li:nth-child(odd)');
+val.forEach(function(item,index{
+   item.textContent=`${index} - hello`}));
+val.forEach(function(item){
+   item.style.background='#ccc';
+});
 */
