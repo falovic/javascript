@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 Switch</title>
+</head>
+
+<body>
+
+    <!-- Çoklu Koşul Yapısı Kullanımı (switch) -->
+
+    <script>
+
+        // Örnek
+        let day;
+
+        switch (new Date().getDay()) {
+            case 0:
+                day = "pazar";
+                break;
+            case 1:
+                day = "pazartesi";
+                break;
+            case 2:
+                day = "salı";
+                break;
+            case 3:
+                day = "çarşamba";
+                break;
+            case 4:
+                day = "perşembe";
+                break;
+            case 5:
+                day = "cuma";
+                break;
+            case 6:
+                day = "cumartesi";
+                break;
+        }
+        console.log(`bugün günlerden ${day}`);
+
+    </script>
+
+</body>
+
+</html>

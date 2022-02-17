@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 Operator</title>
+</head>
+
+<body>
+
+    <!-- Karşılaştırma Operatörleri ve Mantıksal Operatörler -->
+
+    <script>
+
+        /* Karşılaştırma Operatörleri */
+
+        // Eşitse
+        var a1 = 10;
+        var b1 = "10";
+        console.log(a1 == b1) // true
+
+        // Eşit ve türdeşse
+        var a2 = 10;
+        var b2 = "10";
+        console.log(a2 === b2) // false
+
+        // Eşit değilse
+        var a3 = 10;
+        var b3 = "10";
+        console.log(a3 != b3)  // false
+        console.log(a3 !== b3) // true
+
+        var a4 = "kodluyoruz"
+        var b4 = "javascript"
+        console.log(a4 != b4) // true
+
+        // Küçükse
+        var a5 = 10;
+        var b5 = 10;
+        console.log(a5 < b5) // false
+
+        // Küçük veya eşitse
+        var a6 = 10;
+        var b6 = 10;
+        console.log(a6 <= b6) // true
+
+        // Büyükse
+        var a7 = 20;
+        var b7 = 10;
+        console.log(a7 > b7) // true
+
+        // Büyük veya eşitse
+        var a8 = 20;
+        var b8 = 20;
+        console.log(a8 >= b8) // true
+
+        /* Mantıksal Operatörler */
+
+        // Ve - &&
+        var a9 = 10;
+        var b9 = "kodluyoruz";
+        console.log(a9 > 11 && b9 == "kodluyoruz") // false
+
+        // Veya - ||
+        var a10 = 10;
+        var b10 = "kodluyoruz";
+        console.log(a10 > 11 || b10 == "kodluyoruz") // true
+
+        // Değil - !
+        var a11 = 10;
+        var b11 = "kodluyoruz";
+        console.log(!(a11 > 11 || b11 == "kodluyoruz")) // false
+
+        var user = "guest"; var price = 1;
+        console.log(price > 0 && !user == "guest")
+        console.log(price > 0 && user == "guest")
+
+    </script>
+
+</body>
+
+</html>

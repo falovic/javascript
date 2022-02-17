@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 Ternary</title>
+</head>
+
+<body>
+
+    <!-- Ternary Operatör ile If Kullanımı -->
+
+    <script>
+
+        // Ternary operatörünün aldığı 3 parametre şu şekildedir:
+        // 1) "condition" belirtiriz ve sonuna ? koyarız
+        // 2) condition doğru ise ne yapmak istediğimizi belirtir ve sonuna : koyarız
+        // 3) condition yanlış ise ne yapmak istediğimizi belirtiriz
+
+        var money = 25;
+        var canBuy =
+            (money < 20) ? "Paran 20'den az." :
+                (money > 30) ? "Paran 30'dan fazla." :
+                    "Default değer döner: Değişkene değer atanmazsa ya da atanan değer verilen koşulları sağlamazsa.";
+
+        console.log(canBuy);
+
+    </script>
+
+</body>
+
+</html>

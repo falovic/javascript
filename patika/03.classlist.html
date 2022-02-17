@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 Classlist</title>
+</head>
+
+<body>
+
+    <!-- DOM'a CSS Class Bilgisi Eklemek veya Çıkarmak -->
+
+    <div id="content" class="main red">JavaScript classList</div>
+
+    <script>
+        /*
+        add()     : HTML öğesine bir veya daha fazla class ekler.
+        remove()  : HTML öğesinden bir veya daha fazla class'ı siler.
+        item()    : HTML'de class'ı verilen index sırasına göre döndürür. Eğer index, class length'inden (sayısından) daha büyük veya length'ine eşit olursa undefined döner.
+        toggle()  : HTML'de ilgili class varsa siler, yoksa ekler. Öncesinde contains() ile kontrol yapılmalıdır.
+        contains(): class'ın var olup olmadığını manuel olarak kontrol eder.
+        replace() : Bir CSS sınıfını başka bir sınıfla değiştirmek için kullanılır.
+        length()  : Bir öğede bulunan sınıf sayısını verir.
+        */
+
+        let div = document.querySelector('#content');
+        div.classList.add('info');
+        div.classList.add('visible','block');
+        div.classList.remove('info');
+        div.classList.item(0);
+        div.classList.contains('warning');
+        div.classList.toggle('visible');
+        div.classList.replace('red','blue');
+
+    </script>
+
+</body>
+
+</html>
