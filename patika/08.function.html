@@ -94,7 +94,7 @@
         }
 
         val = "Sadece tek bir parametre alması gereken bir fonksiyon yazabiliriz."
-        val = "Girilen değerin karesini döndüren bir 'arrow function' yazdıralım."
+        "Girilen değerin karesini döndüren bir 'arrow function' yazdıralım."
 
         const karesiniAl = (sayi) => sayi * sayi;
 
@@ -118,10 +118,31 @@
 
         // Recursion
 
+        val = "Bir fonksiyonu çağırdığımız zaman o fonksiyon bir çok fonksiyonu daha çalıştırabilir."
+        "Kısaca bir fonksiyon kendisini tekrar çağırıyor ise biz buna recursion diyoruz."
+
+        // recursion olmadan
+        function üs(x, n) {         
+            let sonuc = 1;
+
+            for (let i = 0; i < n; i++) {
+                sonuc *= x;
+            }
+            return sonuc;
+        }
+        console.log(üs(2, 4));
+
+        // recursion ile
+        function üs(x, n) {        
+            if (n == 1) {
+                return x;
+            } else {
+                return x * üs(x, n - 1);
+            }
+        }
+        console.log(üs(2, 4));
 
 
-
-        
     </script>
 
 </body>

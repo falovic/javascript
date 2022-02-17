@@ -926,7 +926,7 @@ function sum(a, b) {
    return c;
 }
 
-console.log(sum(10, 20))
+console.log(sum(10, 20));
 
 // function expressions
 
@@ -935,9 +935,9 @@ const sum2 = function (a, b) {
    return c;
 }
 
-console.log(sum2(10, 30))
-console.log(sum2(10)) // NaN
-console.log(sum2(10, 30, 40, 50)) // fazla olan değerler gözardı edilir.
+console.log(sum2(10, 30));         // 40
+console.log(sum2(10));             // NaN
+console.log(sum2(10, 30, 40, 50)); // fazla olan değerler gözardı edilir.
 
 
 val = "NaN değeri almaması için default parametre ataması yapılabilir."
