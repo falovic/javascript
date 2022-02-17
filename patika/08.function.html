@@ -15,46 +15,113 @@
     <script>
 
         // Fonksiyon Parametreleri ve Gövdesi
-        function printHello(name) {         // name adında bir parametre aldı
+        function printHello(name) {             // name adında bir parametre aldı
             console.log(`Merhaba ${name}`);
         }
-        printHello("Fatih");                // bir argüman vererek fonksiyonu çağırdık. Çıktı: Merhaba Fatih
+        printHello("Fatih");                    // bir argüman vererek fonksiyonu çağırdık. Çıktı: Merhaba Fatih
 
         // Değer Döndüren Fonksiyonlar
         function addition(sayi1, sayi2) {
             return (sayi1 + sayi2);
         }
-        var add = addition(1, 2);           // add değişkenine 1+2 değerini fonksiyon kullanarak atadık.
+        var add = addition(1, 2);               // add değişkenine 1+2 değerini fonksiyon kullanarak atadık.
 
         // Fonksiyon Kapsamı
-        var sayi1 = 5;                      // global değişkenleri tanımlıyoruz
+        var sayi1 = 5;                          // global değişkenleri tanımlıyoruz
         var sayi2 = 2;
         function addition() {
-            var sayi3 = 3;                  // sayi3 adında lokal bir değişken tanımlıyoruz
-            return sayi1 + sayi2 + sayi3;   // fonksiyon içinde global ve local değişkenleri kullanıyoruz
+            var sayi3 = 3;                      // sayi3 adında lokal bir değişken tanımlıyoruz
+            return sayi1 + sayi2 + sayi3;       // fonksiyon içinde global ve local değişkenleri kullanıyoruz
         }
 
-        function multiplication() {         // burada hata alıyoruz
-            return sayi1 * sayi3;           // sayi1 = global (kullanılabilir) 
-        }                                   // sayi3 = local (kullanılamaz)
+        function multiplication() {             // burada hata alıyoruz
+            return sayi1 * sayi3;               // sayi1 = global (kullanılabilir) 
+        }                                       // sayi3 = local (kullanılamaz)
 
         // Callback Fonksiyonlar ve Asenkron Çalışma
         function printScreen1() {
-            console.log("İlk ekran çıktısı");
+            console.log("x1 ekran çıktısı");
         }
 
-        function printScreen2() {
-            setTimeout(function () {
-                console.log("İkinci ekran çıktısı")
-            }, 3000);
+        function printScreen2() {               // setTimeout(parameter1, parameter2);
+            setTimeout(function () {            // parameter1 = çalışması istenen fonksiyon
+                console.log("x2 ekran çıktısı") // parameter2 = ne kadar süre sonra çalışması istendiği (1000 = 1000 milisaniye = 1 saniye gecikme)
+            }, 1000);
         }
 
         function printScreen3() {
-            console.log("Üçüncü ekran çıktısı");
+            console.log("x3 ekran çıktısı");
         }
         printScreen1();
         printScreen2();
         printScreen3();
+
+        /*  fonksiyonlar asenkron (bağımsız) çalışır.
+            belli bir sıralamayla çalıştırmak için callback kullanılır. */
+
+        function printScreen4() {
+            console.log("y1 ekran çıktısı");
+        }
+
+        function printScreen5(callback1, callback2) {
+            setTimeout(function () {
+                callback1();
+                console.log("y2 ekran çıktısı")
+                callback2();
+            }, 3000);
+        }
+
+        function printScreen6() {
+            console.log("y3 ekran çıktısı");
+        }
+        printScreen5(printScreen4, printScreen6);
+
+        // Fonksiyon İfadeleri (Function Expressions)
+
+        // Arrow Functions
+        val = "Fonksiyon yaratmanın bir diğer yolu, ES6 ile gelen ve daha basit bir syntax yapısına sahip olan 'arrow functions' yapısıdır."
+
+        let func1 = (param1, param2, param3) => expression;  // kısa hali
+
+        let func2 = function (param1, param2, param3) {      // uzun hali
+            return expression;
+        };
+
+        const carpim1 = (sayi1, sayi2) => sayi1 * sayi2;     // kısa hali
+
+        const carpim2 = function (sayi1, sayi2) {            // uzun hali
+            return sayi1 * sayi2;
+        }
+
+        val = "Sadece tek bir parametre alması gereken bir fonksiyon yazabiliriz."
+        val = "Girilen değerin karesini döndüren bir 'arrow function' yazdıralım."
+
+        const karesiniAl = (sayi) => sayi * sayi;
+
+        val = "Bir koşula göre iki farklı fonksiyon çalıştırmanız gerekebilir."
+
+        let experience = prompt('Kac yillik gelistirici tecrubeniz var', 4);
+
+        const developer =
+            experience > 5
+                ? () => alert('Bir cok konuyu biliyorum')
+                : () => alert('Hicbir sey bilmiyorum');
+
+        developer();
+
+        val = "Bir satırı aşan fonksiyonlarda parantezler birden fazla statement yazmamızı sağlar."
+
+        let toplam = (a, b) => {
+            let result = a + b;
+            return result;
+        };
+
+        // Recursion
+
+
+
+
+        
     </script>
 
 </body>
