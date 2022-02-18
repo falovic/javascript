@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Events</title>
+</head>
+
+<body>
+
+    <!-- DOM Etkinlikleriyle Çalışmak -->
+
+    <button id="buton1">Buton 1</button>
+    <button id="buton2">Buton 2</button>
+
+    <script>
+
+        // Event Listener ile Çalışmak
+
+        /* 1. Metot */
+        const buton1 = document.querySelector("#buton1");   // id = button olan nesne seçildi 
+
+        buton1.addEventListener('click', function () {      // Nesneye bir etkinlik atandı (tip, fonksiyon)                                                          
+
+            alert("Buton 1 Tıklandı");                      // Çıktı : Buton 1 Tıklandı
+        })
+
+        /* 2. Metot */
+        const buton2 = document.querySelector("#buton2");   // id = button olan nesne seçildi
+
+        buton2.addEventListener('click', btnClicked);       // Nesneye bir etkinlik atandı. (tip, aşağıda tanımlanan fonksiyonun adı)
+
+        function btnClicked() {
+            alert("Buton 2 Tıklandı")                       // Çıktı : Buton 2 Tıklandı
+        }
+
+        // Mouse Etkinliği
+        
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
