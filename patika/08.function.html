@@ -99,16 +99,16 @@
         const karesiniAl = (sayi) => sayi * sayi;
 
         val = "Bir koşula göre iki farklı fonksiyon çalıştırmanız gerekebilir."
-
+        /*
         let experience = prompt('Kac yillik gelistirici tecrubeniz var', 4);
-
+        
         const developer =
             experience > 5
                 ? () => alert('Bir cok konuyu biliyorum')
                 : () => alert('Hicbir sey bilmiyorum');
 
         developer();
-
+        */
         val = "Bir satırı aşan fonksiyonlarda parantezler birden fazla statement yazmamızı sağlar."
 
         let toplam = (a, b) => {
@@ -122,7 +122,7 @@
         "Kısaca bir fonksiyon kendisini tekrar çağırıyor ise biz buna recursion diyoruz."
 
         // recursion olmadan
-        function üs(x, n) {         
+        function üs(x, n) {
             let sonuc = 1;
 
             for (let i = 0; i < n; i++) {
@@ -133,7 +133,7 @@
         console.log(üs(2, 4));
 
         // recursion ile
-        function üs(x, n) {        
+        function üs(x, n) {
             if (n == 1) {
                 return x;
             } else {
@@ -141,7 +141,6 @@
             }
         }
         console.log(üs(2, 4));
-
 
     </script>
 
