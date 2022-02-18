@@ -47,13 +47,9 @@
         </select>
         <br><br>
         <input type="text" id="input2">
-        <br><br>       
+        <br><br>
         <input type="text" id="input3">
     </form>
-
-    <hr>
-
-
 
     <script>
 
@@ -100,23 +96,15 @@
 
         // Form Etkinlikleri
         const color = document.querySelector("#select");    // id = select olan nesne çağrılarak color değişkenine atandı
-        
-        color.addEventListener('change', selectBox);        // color değişkenine change etkinliği etkinliği atandı ve fonksiyon ismi parametre olarak atandı
 
-        
-        function selectBox(event) {                         // selectbox her seçildiğinde etkinlik tipi = change ve değeri input'a yazılmaktadır
-            
+        color.addEventListener('change', select1);        // color değişkenine change etkinliği etkinliği atandı ve fonksiyon ismi parametre olarak atandı
+
+
+        function select1(event) {                         // selectbox her seçildiğinde etkinlik tipi = change ve değeri input'a yazılmaktadır
+
             document.getElementById("input2").value = `etkinlik tipi: ${event.type}`;
             document.getElementById("input3").value = `değer: ${event.target.value}`;
         }
-
-        // Kabarcıklanma (Event Bubbling) ve Yakalama (Event Capturing) Etkinliği
-        
-
-
-
-
-
     </script>
 
 </body>
