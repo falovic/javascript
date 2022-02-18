@@ -6,14 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10 Events</title>
+
+    <style>
+        hr {
+            width: 200px;
+            margin-left: 0;
+            margin-block: 20px;
+        }
+    </style>
+
 </head>
 
 <body>
 
     <!-- DOM Etkinlikleriyle Çalışmak -->
 
+    <hr>
+
     <button id="buton1">Buton 1</button>
     <button id="buton2">Buton 2</button>
+    <button id="buton3">Buton 3</button>
+
+    <p id="text">Buton 3 (Çift tıkla)</p>
+
+    <hr>
+
+    <input type="text" id="input" placeholder="ctrl + x">
+
+    <hr>
+
+    <!-- Örnek Form -->
+    <form action="#" id="selectColor">
+        <label for="color">Choose a color:</label>
+        <select name="colors" id="select">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+        </select>
+        <br><br>
+        <input type="text" id="input2">
+        <br><br>       
+        <input type="text" id="input3">
+    </form>
+
+    <hr>
+
+
 
     <script>
 
@@ -32,11 +72,45 @@
 
         buton2.addEventListener('click', btnClicked);       // Nesneye bir etkinlik atandı. (tip, aşağıda tanımlanan fonksiyonun adı)
 
-        function btnClicked() {
-            alert("Buton 2 Tıklandı")                       // Çıktı : Buton 2 Tıklandı
+        function btnClicked() {                             // Çıktı : Buton 2 Tıklandı
+
+            alert("Buton 2 Tıklandı")
         }
 
         // Mouse Etkinliği
+        const buton3 = document.querySelector("#buton3");   // id = buton3 olan buton çağrıldı
+
+        buton3.addEventListener('dblclick', clickFnc);      // dblclick = çift tıklama etkinliği nesneye atandı, fonksiyon ismi parametre olarak tanımlandı
+
+        function clickFnc() {                               // fonksiyonda id = text olan element çağrılarak innerHTML ile içeriği değiştirildi
+
+            document.getElementById("text").innerHTML = "Buton 3 Tıklandı";
+        }
+
+        // Klavye Etkinliği        
+        const keyboard = document.querySelector('#input');  // id = input olan nesne çağrılarak keyboard değişkenine atandı
+
+        keyboard.addEventListener("cut", cutFnc);           // keyboard isimli değişkene "cut" etkinliği atandı ve fonksiyon ismi parametre olarak atandı
+
+        function cutFnc(event) {
+
+            document.getElementById("input").value = `"${event.type}" işlemi yaptınız`;
+
+        }
+
+        // Form Etkinlikleri
+        const color = document.querySelector("#select");    // id = select olan nesne çağrılarak color değişkenine atandı
+        
+        color.addEventListener('change', selectBox);        // color değişkenine change etkinliği etkinliği atandı ve fonksiyon ismi parametre olarak atandı
+
+        
+        function selectBox(event) {                         // selectbox her seçildiğinde etkinlik tipi = change ve değeri input'a yazılmaktadır
+            
+            document.getElementById("input2").value = `etkinlik tipi: ${event.type}`;
+            document.getElementById("input3").value = `değer: ${event.target.value}`;
+        }
+
+        // Kabarcıklanma (Event Bubbling) ve Yakalama (Event Capturing) Etkinliği
         
 
 
