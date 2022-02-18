@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 LocalStorage</title>
+
+</head>
+
+<body>
+
+    <!-- LocalStorage ile Veri Eklemek, Düzenlemek ve Silmek -->
+
+    <!-- Örnke Form -->
+    <div class="small-container">
+        <h1>New Tab App</h1>
+
+        <form>
+            <input id="item" type="text" placeholder="New">
+            <input type="submit" value="Ekle">
+        </form>
+
+        <h2>Items</h2>
+        <ul></ul>
+
+        <button>Tümünü sil</button>
+    </div>
+
+    <script>
+
+        // Veri Ekleme
+        window.localStorage.setItem("key", "value");
+
+        val = "Bu metot iki parametre alır: 1. anahtar (key) & 2. değer (value)"
+        "Daha önce belirtilen bir anahtar kullanılırsa, veri eski kaydın üzerine yazılarak güncellenmiş olur."
+        "Veriler sadece string biçiminde kaydedilebilir."
+        "Karmaşık bir veri kaydedilirken toString() metodu çalıştırılmalı ve üretilen değer kaydedilmelidir."
+        "Json verisini kaydetmek için JSON.stringify() metodu kullanılmalıdır."
+
+        // Veri Silme
+        localStorage.removeItem("key"); // ilgili anahtarı siler
+        localStorage.clear();           // tüm verileri siler
+
+        // Örnek
+        const form = document.querySelector('form');
+        const ul = document.querySelector('ul');
+        const button = document.querySelector('button');
+        const input = document.getElementById('item');
+        let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+        localStorage.setItem('items', JSON.stringify(itemsArray));
+        const data = JSON.parse(localStorage.getItem('items'));
+
+        const liMaker = (text) => {
+            const li = document.createElement('li');
+            li.textContent = text;
+            ul.appendChild(li);
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            itemsArray.push(input.value);
+            localStorage.setItem('items', JSON.stringify(itemsArray));
+            liMaker(input.value);
+            input.value = "";
+        });
+
+        data.forEach(item => {
+            liMaker(item);
+        });
+
+        button.addEventListener('click', function () {
+            localStorage.clear();
+            while (ul.firstChild) {
+                ul.removeChild(ul.firstChild);
+            }
+            itemsArray = [];
+        });
+
+    </script>
+
+</body>
+
+</html>
