@@ -21,18 +21,69 @@
         greet("John")
 
         // Function expression
-        const greet = function (who) {
+        let greet1 = function (who) {
             return `Hello, ${who}!`;
         }
         greet("John")
 
         // Arrow function
-        const greet = (who) => `Hello, ${who}!`;
+        let greet2 = (who) => `Hello, ${who}!`;
 
         val = "eğer bir tane parametre varsa, parantezleri de kaldırabiliriz."
 
-        const greet = who => `Hello, ${who}!`;
+        let greet3 = who => `Hello, ${who}!`;
 
+        /**********/
+
+        // ES5
+        var toplam1 = function (x, y) {
+            return x + y;
+        };
+
+        // ES6
+        let toplam2 = (x, y) => x + y;
+
+        /**********/
+
+        // ES5
+        var sayi1 = function (x) {
+            return x * x
+        };
+
+        // ES6
+        let sayi2 = x => x * x;
+
+        /**********/
+
+        // return keyword
+
+        val = "Eğer fonksiyon içerisinde {} parantez varsa return keyword'ü kullanmamız gerekir."
+
+        var feedTheCat = (cat) => {
+            if (cat === 'hungry') {
+                return 'Feed the cat';
+            } else {
+                return 'Do not feed the cat';
+            }
+        }
+
+        // this keyword
+
+        let movie = {
+
+            name: "La la land",
+
+            thisInArrow: () => {
+                console.log("Movie name is " + this.name); // 'this' window'u referans gösterir. Bu yüzden name'yi bulamaz.
+            },
+
+            thisInRegular() {
+                console.log("Movie name is " + this.name); // 'this' kendisini referans gösterir ve çalışır.
+            }
+        };
+
+        movie.thisInArrow();        // output : Movie name is
+        movie.thisInRegular();      // output : Movie name is La la land
 
     </script>
 
