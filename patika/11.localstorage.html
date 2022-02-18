@@ -80,6 +80,15 @@
             itemsArray = [];
         });
 
+        // Dizi Ekleme
+        var movies = ["Kasaba", "Kış uykusu","Bir Zamanlar Anadolu"];
+        localStorage.setItem("Nuri Bilge Ceylan", JSON.stringify(movies));
+
+        // Veriye Erişme
+        var retrievedData = JSON.parse(localStorage.getItem("Nuri Bilge Ceylan"));
+
+        console.log(retrievedData);
+
     </script>
 
 </body>
