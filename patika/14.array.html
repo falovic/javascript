@@ -11,9 +11,11 @@
 
 <body>
 
-    <!-- Dizi (Array) Oluşturmak ve Dizi İçindeki Elemanlara Ulaşmak -->
+    <!-- Dizi (Array) -->
 
     <script>
+
+        // Dizi Oluşturmak ve Dizi İçindeki Elemanlara Ulaşmak
 
         // farklı tipteki elemanlar
         let arr = [1, 2, 3, "dört", "beş"];
@@ -37,10 +39,44 @@
             console.log(item, index);
         });
 
-        // uzunluğu bilinmeyen dizinin son elemanına erişim
-        let aylar = ['mart','nisan','mayis','haziran','temmuz'] 
+        // dizinin son elemanına erişim
+        let aylar = ['mart', 'nisan', 'mayis', 'haziran', 'temmuz']
         let sonEleman = aylar[aylar.length - 1]
         console.log(sonEleman);
+
+        // Diziye Yeni Eleman Eklemek, Çıkartmak ve Güncellemek
+
+        // push()
+        "push() metodu, var olan bir dizinin sonuna eleman eklemeye yarar."
+
+        var sports = ['basketball', 'football', 'tennis'];
+        console.log(sports);
+        sports.push('baseball');
+        console.log(sports);
+
+        // unshift()
+        "unshift() metodu, var olan bir dizinin başına eleman eklemeye yarar."
+
+        var sports = ['basketball', 'football', 'tennis'];
+        console.log(sports);
+        sports.unshift('baseball');
+        console.log(sports);
+
+        // splice()
+        ".splice(x,y,'z') x'ten itibaren y tane eleman siler ve sonuna 'z' elemanını ekler."
+
+        var sports = ['basketball', 'football', 'tennis'];
+        console.log(sports);
+        sports.splice(1, 1, 'baseball');
+        console.log(sports);
+
+        // pop()
+        "pop() metodu, var olan bir dizinin en sonundaki elemanı silmeye yarar."
+
+        var sports = ['basketball', 'football', 'tennis'];
+        console.log(sports);
+        sports.pop();
+        console.log(sports);
 
     </script>
 
