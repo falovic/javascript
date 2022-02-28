@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Form</title>
+
+    <style>
+        p {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Form ve Form Submit Yönetimi -->
+
+    <!-- Örnek Form -->
+    <form method="GET">
+        <input type="text" name="age" placeholder="Yaşınızı giriniz." />
+        <button type="submit">Gönder</button>
+    </form>
+
+    <br>
+
+    <!-- Örnek Form -->
+    <form method="POST">
+        <input type="email" name="email" placeholder="Email adresinizi giriniz." />
+        <button type="submit">Gönder</button>
+    </form>
+
+    <script>
+
+        val = "Form yapısının en önemli parametresi method parametresidir. Method, 'post' veya 'get' olmak üzere iki türlü değer alabilir."
+
+        // GET Methodu 
+        "Form verilerini URL üzerinden gönderir. Kullanıcı yaşını girip gönder butonuna bastığı zaman mail alanına girdiği veri URL üzerinden gönderilir."
+        "Get metodu önemsiz verilerde kullanılmalıdır, kullanıcı adı, şifre gibi bilgilerin bu method ile gönderilmesi uygun değildir."
+
+        // POST Methodu
+        "Verileri arka planda gönderir. Örneğin; kullanıcı mail adresini girip gönder butonuna bastığı zaman veriler kullanıcıya gözükmeyecek şekilde sayfaya gönderilir."
+
+    </script>
+
+    <h3>Temel Input Tipleri</h3>
+
+    <form action="">
+    
+    <input type="text"> <p>text</p> <br>
+
+    <input type="password"> <p>password</p> <br>
+
+    <p>Male <input type="radio" name="gender"> Female <input type="radio" name="gender"></p> <p>radio</p> <br>
+
+    <input type="checkbox"> <p>checkbox</p> <br>
+
+    <input type="button" value="Button"> <p>button</p> <br>
+
+    <input type="submit"> <p>submit</p> <br>
+    <p>Submit, form içerisinde girilen verileri gönderir. <br>
+        methot="get" : action durumuna göre sayfanın adres çubuğundaki url’in sonunda veriler saklanır. <br>
+        methot="post" : sayfanın arka planında veriler saklanır.</p> <br>
+
+    <input type="reset"> <p>reset</p> <br>
+
+    <input type="color"> <p>color</p> <br>
+
+    <input type="date"> <p>date (gg.aa.yyyy)</p> <br>
+
+    <input type="email"> <p>email</p> <br>
+
+    <input type="number"> <p>number</p> <br>
+
+    <input type="range"> <p>range</p> <br>
+
+    <input type="search"> <p>search</p> <br>
+
+    <input type="time"> <p>time (hh.mm)</p> <br>
+
+</form>
+
+</body>
+
+</html>
