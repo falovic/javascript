@@ -18,20 +18,6 @@
 
     <!-- Form ve Form Submit Yönetimi -->
 
-    <!-- Örnek Form -->
-    <form method="GET">
-        <input type="text" name="age" placeholder="Yaşınızı giriniz." />
-        <button type="submit">Gönder</button>
-    </form>
-
-    <br>
-
-    <!-- Örnek Form -->
-    <form method="POST">
-        <input type="email" name="email" placeholder="Email adresinizi giriniz." />
-        <button type="submit">Gönder</button>
-    </form>
-
     <script>
 
         val = "Form yapısının en önemli parametresi method parametresidir. Method, 'post' veya 'get' olmak üzere iki türlü değer alabilir."
@@ -43,45 +29,101 @@
         // POST Methodu
         "Verileri arka planda gönderir. Örneğin; kullanıcı mail adresini girip gönder butonuna bastığı zaman veriler kullanıcıya gözükmeyecek şekilde sayfaya gönderilir."
 
+        // onSubmit ve onChange Eventleri
+        "onSubmit = Form submit olduğu anda ne yapacağını söylememizi sağlar."
+        "onChange = Form'un içindeki input'ların value'su her değiştiğinde, değişen bu value'yu her defasında elde etmemizi sağlar."
+
+        // Form Özellikleri
+        "action = Formu submit ettikten sonra nasıl bir aksiyon alacağını belirler. Genelde form datası server'a gönderilir fakat haricen bir dosya da atanabilir."
+
+        "method = Form datasının hangi methodla gönderileceğine karar verir ('Get' & 'Post'). Default değer 'Get' metodudur."
+
+        // Örnek Form 2
+        var username;
+        var password;
+        function handleSubmit(e) {
+            e.preventDefault();
+            console.log("username:" + username + "-" + "password:" + password);
+        }
+        function handleChange(e) {
+            if (e.target.name === "username") {
+                username = e.target.value;
+            }
+            if (e.target.name === "password") {
+                password = e.target.value;
+            }
+        }
+
     </script>
 
     <h3>Temel Input Tipleri</h3>
 
     <form action="">
-    
-    <input type="text"> <p>text</p> <br>
 
-    <input type="password"> <p>password</p> <br>
+        <input type="text">
+        <p>text</p> <br>
 
-    <p>Male <input type="radio" name="gender"> Female <input type="radio" name="gender"></p> <p>radio</p> <br>
+        <input type="password">
+        <p>password</p> <br>
 
-    <input type="checkbox"> <p>checkbox</p> <br>
+        <p>Male <input type="radio" name="gender"> Female <input type="radio" name="gender"></p>
+        <p>radio</p> <br>
 
-    <input type="button" value="Button"> <p>button</p> <br>
+        <input type="checkbox">
+        <p>checkbox</p> <br>
 
-    <input type="submit"> <p>submit</p> <br>
-    <p>Submit, form içerisinde girilen verileri gönderir. <br>
-        methot="get" : action durumuna göre sayfanın adres çubuğundaki url’in sonunda veriler saklanır. <br>
-        methot="post" : sayfanın arka planında veriler saklanır.</p> <br>
+        <input type="button" value="Button">
+        <p>button</p> <br>
 
-    <input type="reset"> <p>reset</p> <br>
+        <input type="submit">
+        <p>submit</p> <br>
+        <p>Submit, form içerisinde girilen verileri gönderir. <br>
+            methot="get" : action durumuna göre sayfanın adres çubuğundaki url’in sonunda veriler saklanır. <br>
+            methot="post" : sayfanın arka planında veriler saklanır.</p> <br>
 
-    <input type="color"> <p>color</p> <br>
+        <input type="reset">
+        <p>reset</p> <br>
 
-    <input type="date"> <p>date (gg.aa.yyyy)</p> <br>
+        <input type="color">
+        <p>color</p> <br>
 
-    <input type="email"> <p>email</p> <br>
+        <input type="date">
+        <p>date (gg.aa.yyyy)</p> <br>
 
-    <input type="number"> <p>number</p> <br>
+        <input type="email">
+        <p>email</p> <br>
 
-    <input type="range"> <p>range</p> <br>
+        <input type="number">
+        <p>number</p> <br>
 
-    <input type="search"> <p>search</p> <br>
+        <input type="range">
+        <p>range</p> <br>
 
-    <input type="time"> <p>time (hh.mm)</p> <br>
+        <input type="search">
+        <p>search</p> <br>
 
-</form>
+        <input type="time">
+        <p>time (hh.mm)</p> <br>
 
+    </form>
+
+    <h4>Örnek Form 1 (Get)</h4>
+
+    <form method="GET">
+        <input type="text" name="username" placeholder="Kullanıcı adınızı giriniz" /> 
+        <br><br>
+        <input type="password" name="password" placeholder="Şifrenizi giriniz." />
+        <button type="submit">Giriş</button>
+    </form>
+
+    <h4>Örnek Form 2 (Post)</h4>
+
+    <form onsubmit="handleSubmit(e)" method="POST">
+        <input type="text" name="username" placeholder="Kullanıcı adınızı giriniz" onchange="handleChange(event)" />
+        <br><br>
+        <input type="password" name="password" placeholder="Şifrenizi giriniz." onchange="handleChange(event)" />
+        <button type="submit">Giriş</button>
+    </form>
 </body>
 
 </html>
