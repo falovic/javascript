@@ -49,6 +49,10 @@
         // Diziye Yeni Eleman Eklemek, Çıkartmak ve Güncellemek
 
         var sports = ['basketball', 'football', 'tennis'];
+        
+        // dizide eleman güncellemek
+        sports[2] = 'judo';
+        console.log(sports);
 
         // push()
         "dizinin sonuna eleman eklemeye yarar."
@@ -105,13 +109,30 @@
         });
 
         // map()
+        "kendisine verilen fonksiyonu dizinin her elemanı için uygular fakat forEach'ten farklı olarak sonucu yeni bir dizide tutar."
+
+        const numbers = [1, 2, 3];
+        let newnumbers = numbers.map(function (number) {
+            return number * 5;
+        });
+        console.log(newnumbers); // 5, 10, 15
+
+        // some()
+        "girilen fonksiyonun sonucuna göre boolean (true/false) çıktı verir. 'true' için en az bir elemanın koşulu sağlaması yeterlidir."
+        
+        // every()
+        "girilen fonksiyonun sonucuna göre boolean (true/false) çıktı verir. 'true' için tüm elemanların koşulu sağlaması gerekir."
+
+        // filter()
+        "fonksiyonun koşulunu sağlayan elemanlardan yeni bir dizi oluşturur."
+
+        // find()
+        "belirtilen koşulu sağlayan elemanı bulmaya yarar. koşulu birden fazla eleman sağlıyorsa ilk elemanı döndürür, hiçbiri sağlamıyorsa 'undefined' döndürür."
+
+        // sort()
 
 
-        // Dizide Eleman Güncellemek
-
-        sports[2] = 'judo';
-
-        console.log(sports);
+        
 
         /**********/
 
