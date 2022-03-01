@@ -44,39 +44,78 @@
         let sonEleman = aylar[aylar.length - 1]
         console.log(sonEleman);
 
+        /**********/
+
         // Diziye Yeni Eleman Eklemek, Çıkartmak ve Güncellemek
 
-        // push()
-        "push() metodu, var olan bir dizinin sonuna eleman eklemeye yarar."
-
         var sports = ['basketball', 'football', 'tennis'];
-        console.log(sports);
+
+        // push()
+        "dizinin sonuna eleman eklemeye yarar."
+
         sports.push('baseball');
-        console.log(sports);
 
         // unshift()
-        "unshift() metodu, var olan bir dizinin başına eleman eklemeye yarar."
+        "dizinin başına eleman eklemeye yarar."
 
-        var sports = ['basketball', 'football', 'tennis'];
-        console.log(sports);
         sports.unshift('baseball');
-        console.log(sports);
 
-        // splice()
-        ".splice(x,y,'z') x'ten itibaren y tane eleman siler ve sonuna 'z' elemanını ekler."
+        // splice(x,y,'z')
+        "x'ten itibaren y tane eleman siler ve sonuna 'z' elemanını ekler."
 
-        var sports = ['basketball', 'football', 'tennis'];
-        console.log(sports);
         sports.splice(1, 1, 'baseball');
-        console.log(sports);
 
         // pop()
-        "pop() metodu, var olan bir dizinin en sonundaki elemanı silmeye yarar."
+        "dizinin en sonundaki elemanı silmeye yarar."
 
-        var sports = ['basketball', 'football', 'tennis'];
-        console.log(sports);
         sports.pop();
+
+        // shift()
+        "dizinin başından eleman silmeye yarar."
+
+        sports.shift();
+
+        // includes()
+        "bir elemanın dizi içerisinde bulunup bulunmadığını kontrol eder, boolean (true/false) olarak çıktı alınır."
+
+        sports.includes('baseball');
+
+        // slice(x,y)
+        "x'ten y'ye kadar olan (y hariç) elemanlarla yeni bir dizi oluşturur."
+
+        sports.slice(0, 2);
+
+        // join('x')
+        "girlen parametreyi 'a x b x c' şeklinde dizideki elemanların arasına string olarak yerleştirir. parametre kısmı boş bırakılırsa default virgül koyar."
+
+        sports.join();
+
+        // x.concat(y)
+        "x ve y dizilerini birleştirir."
+
+        var drinks = ['water', 'coffee', 'tea'];
+
+        sports.concat(drinks);
+
+        // forEach(x, y, z)
+        "x = elemanın kendisi, y = elemanın indeksi, z = dizinin kendisi"
+
+        sports.forEach(function (eleman, index, dizi) {
+            console.log(eleman, index, dizi);
+        });
+
+        // map()
+
+
+        // Dizide Eleman Güncellemek
+
+        sports[2] = 'judo';
+
         console.log(sports);
+
+        /**********/
+
+        // Dizi (Array) Metotlarının Kullanımı ve Array içinde Array Oluşturma
 
     </script>
 
