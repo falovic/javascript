@@ -49,7 +49,7 @@
         // Diziye Yeni Eleman Eklemek, Çıkartmak ve Güncellemek
 
         var sports = ['basketball', 'football', 'tennis'];
-        
+
         // dizide eleman güncellemek
         sports[2] = 'judo';
         console.log(sports);
@@ -119,7 +119,7 @@
 
         // some()
         "girilen fonksiyonun sonucuna göre boolean (true/false) çıktı verir. 'true' için en az bir elemanın koşulu sağlaması yeterlidir."
-        
+
         // every()
         "girilen fonksiyonun sonucuna göre boolean (true/false) çıktı verir. 'true' için tüm elemanların koşulu sağlaması gerekir."
 
@@ -129,14 +129,23 @@
         // find()
         "belirtilen koşulu sağlayan elemanı bulmaya yarar. koşulu birden fazla eleman sağlıyorsa ilk elemanı döndürür, hiçbiri sağlamıyorsa 'undefined' döndürür."
 
-        // sort()
+        // reduce()
+        "diziyi yalnızca bir elemana indirger, parametre olarak bir fonksiyon ve accumulator'ün (toplayıcının) başlangıç değeri girilir."
 
+        const numbers2 = [10, 20, 30];
+
+        function reductive(accumulator, number) {       // dizi elemanlarını toplayarak indirgeyecek bir fonksiyon 
+            return accumulator + number;
+        }
+
+        const result = numbers2.reduce(reductive, 0);
+
+        console.log(result);
 
         
+        const result2 = numbers2.reduce(reductive, 5);  // eğer accumulator 0 yerine 5'ten başlasaydı
 
-        /**********/
-
-        // Dizi (Array) Metotlarının Kullanımı ve Array içinde Array Oluşturma
+        console.log(result2);
 
     </script>
 
