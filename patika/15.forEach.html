@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 forEach</title>
+
+</head>
+
+<body>
+
+    <!-- forEach Metodu -->
+
+    <script>
+
+        "forEach, döngü oluşturmayı ve bu döngüyü sırayla çalıştırmamızı sağlayan bir array metodudur."
+        "3 parametre alabilir: 1.item, 2.index, 3.array"
+
+        const animals = ["cat", "dog", "bird", "horse"];
+
+        animals.forEach((value, index, array) => {
+            console.log(`value: ${value}`);
+            console.log(`index: ${index}`);
+            console.log(`array: ${array}`);
+        });
+
+        // fat arrow short function
+        animals.forEach((v, i, a) => console.log(`${v} - ${i} - ${a}`));
+
+        // array from array
+        const numbers = [4, 11, 9];
+        const newArray = [];
+
+        numbers.forEach(function (numbers) {
+            newArray.push(numbers * 3);
+        });
+
+        console.log(newArray);
+
+    </script>
+
+</body>
+
+</html>
