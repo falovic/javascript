@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Filter</title>
+
+</head>
+
+<body>
+
+    <!-- Filter ile Array İçinden İstenen Bilgilerin Yeni Listeye Eklenmesi -->
+
+    <script>
+
+        // Array 01
+        const products = ["Mikrofon", "Kablo", "Telefon", "Bilgisayar", "Mouse", "Klavye", "Ekran"]
+
+        const newProducts = products.filter(item => item.length > 5)        // harf sayısı 5'ten fazla olanlar filtrelendi
+        console.log(newProducts);
+
+        // Array 02
+        const users = [
+            { fullName: "Mehmet Veli", isActive: false },
+            { fullName: "Ali Duran", isActive: true },
+            { fullName: "Ahmet Yılmaz", isActive: true },
+            { fullName: "Oğuz Şahin", isActive: false },
+        ]
+
+        const activeUsers = users.filter(user => user.isActive === true);   // isActive: true olanlar fitrelendi
+        console.log(activeUsers);
+
+    </script>
+
+</body>
+
+</html>
